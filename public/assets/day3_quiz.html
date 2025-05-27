@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三天測驗：設計美學與品牌特色</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e3f2fd;
+        }
+        
+        h1 {
+            color: #1565c0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #90caf9;
+            padding-bottom: 10px;
+        }
+        
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #90caf9;
+        }
+        
+        .question h3 {
+            color: #0d47a1;
+            margin-bottom: 15px;
+        }
+        
+        .options {
+            margin-left: 20px;
+        }
+        
+        .option {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .option input {
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .option label {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #0d47a1;
+        }
+        
+        .result {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .feedback {
+            margin-top: 20px;
+        }
+        
+        .correct {
+            color: #2e7d32;
+        }
+        
+        .incorrect {
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <h1>第三天測驗：設計美學與品牌特色</h1>
+    
+    <div class="quiz-container">
+        <form id="quiz-form">
+            <div class="question" id="q1">
+                <h3>1. 下列哪項是Chanel品牌珠寶設計的核心美學特徵？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1a" value="A">
+                        <label for="q1a">A. 超現實主義元素與鮮豔色彩</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1b" value="B">
+                        <label for="q1b">B. 簡約優雅、黑白對比、多層次鏈條與山茶花元素</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1c" value="C">
+                        <label for="q1c">C. 浪漫華麗、立體花卉與蝴蝶元素</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1d" value="D">
+                        <label for="q1d">D. 幾何建築感、金屬硬朗線條、工業風格</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q2">
+                <h3>2. Schiaparelli的珠寶設計風格受到哪個藝術運動的深刻影響？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2a" value="A">
+                        <label for="q2a">A. 印象派</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2b" value="B">
+                        <label for="q2b">B. 立體主義</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2c" value="C">
+                        <label for="q2c">C. 超現實主義</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2d" value="D">
+                        <label for="q2d">D. 極簡主義</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q3">
+                <h3>3. 下列哪項設計元素最能代表Dior品牌的珠寶美學？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3a" value="A">
+                        <label for="q3a">A. 浪漫花卉、蝴蝶結、柔和曲線、優雅比例</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3b" value="B">
+                        <label for="q3b">B. 幾何圖形、鮮豔色彩、超現實元素</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3c" value="C">
+                        <label for="q3c">C. 工業風格、金屬質感、硬朗線條</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3d" value="D">
+                        <label for="q3d">D. 民族風情、部落圖騰、原始材質</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q4">
+                <h3>4. 設計師品牌標誌性元素的運用如何影響高級時裝珠寶的辨識度？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4a" value="A">
+                        <label for="q4a">A. 標誌性元素會降低珠寶的藝術價值</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4b" value="B">
+                        <label for="q4b">B. 標誌性元素使珠寶具有品牌辨識度，成為品牌視覺語言的延伸</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4c" value="C">
+                        <label for="q4c">C. 標誌性元素只用於低價珠寶，高級珠寶應避免使用</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4d" value="D">
+                        <label for="q4d">D. 標誌性元素與珠寶設計無關，只用於服裝</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q5">
+                <h3>5. 下列哪位設計師的珠寶作品以建築感與幾何結構著稱？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5a" value="A">
+                        <label for="q5a">A. Christian Dior</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5b" value="B">
+                        <label for="q5b">B. Cristóbal Balenciaga</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5c" value="C">
+                        <label for="q5c">C. Hubert de Givenchy</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5d" value="D">
+                        <label for="q5d">D. Yves Saint Laurent</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q6">
+                <h3>6. 色彩在高級時裝珠寶設計中的作用是什麼？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6a" value="A">
+                        <label for="q6a">A. 色彩只是裝飾性元素，沒有特別意義</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6b" value="B">
+                        <label for="q6b">B. 色彩傳達情感、建立品牌識別、反映時代精神與文化背景</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6c" value="C">
+                        <label for="q6c">C. 高級時裝珠寶應避免使用色彩，以保持優雅</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6d" value="D">
+                        <label for="q6d">D. 色彩只用於低價珠寶，高級珠寶應使用單色</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q7">
+                <h3>7. 比例與平衡在高級時裝珠寶設計中的重要性體現在哪些方面？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7a" value="A">
+                        <label for="q7a">A. 影響珠寶的舒適度、視覺效果與與服裝的協調性</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7b" value="B">
+                        <label for="q7b">B. 只影響珠寶的價格，不影響設計</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7c" value="C">
+                        <label for="q7c">C. 只對項鍊設計有影響，對其他珠寶無關</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7d" value="D">
+                        <label for="q7d">D. 比例與平衡只在傳統珠寶中重要，高級時裝珠寶可以忽略</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q8">
+                <h3>8. Givenchy的珠寶設計風格有何特點？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8a" value="A">
+                        <label for="q8a">A. 超現實主義、誇張造型、鮮豔色彩</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8b" value="B">
+                        <label for="q8b">B. 優雅簡約、精緻細節、平衡比例、低調奢華</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8c" value="C">
+                        <label for="q8c">C. 工業風格、硬朗線條、金屬質感</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8d" value="D">
+                        <label for="q8d">D. 民族風情、部落圖騰、原始材質</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q9">
+                <h3>9. 下列哪項不是高級時裝珠寶設計中的視覺元素？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9a" value="A">
+                        <label for="q9a">A. 線條與形狀</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9b" value="B">
+                        <label for="q9b">B. 質感與光澤</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9c" value="C">
+                        <label for="q9c">C. 比例與平衡</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9d" value="D">
+                        <label for="q9d">D. 市場價值</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q10">
+                <h3>10. 設計師與藝術家合作對高級時裝珠寶設計的影響是什麼？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10a" value="A">
+                        <label for="q10a">A. 降低珠寶的實用性，使其只適合展示</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10b" value="B">
+                        <label for="q10b">B. 提高珠寶的藝術性與創新性，打破傳統界限，引入新視角</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10c" value="C">
+                        <label for="q10c">C. 使珠寶失去品牌特色，變得難以辨認</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10d" value="D">
+                        <label for="q10d">D. 只是行銷策略，對設計本身沒有實質影響</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" class="submit-btn" onclick="calculateScore()">提交測驗</button>
+        </form>
+        
+        <div class="result" id="result">
+            <div class="score" id="score"></div>
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </div>
+    
+    <script>
+        // 正確答案
+        const correctAnswers = {
+            q1: "B",
+            q2: "C",
+            q3: "A",
+            q4: "B",
+            q5: "B",
+            q6: "B",
+            q7: "A",
+            q8: "B",
+            q9: "D",
+            q10: "B"
+        };
+        
+        function calculateScore() {
+            let score = 100;
+            let feedback = "";
+            let answeredQuestions = 0;
+            
+            // 檢查每個問題
+            for (let i = 1; i <= 10; i++) {
+                const questionId = "q" + i;
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                
+                if (selectedOption) {
+                    answeredQuestions++;
+                    const userAnswer = selectedOption.value;
+                    
+                    if (userAnswer !== correctAnswers[questionId]) {
+                        // 答錯扣10分
+                        score -= 10;
+                        feedback += `<p class="incorrect">問題 ${i}: 不正確。正確答案是 ${correctAnswers[questionId]}。</p>`;
+                    } else {
+                        feedback += `<p class="correct">問題 ${i}: 正確!</p>`;
+                    }
+                } else {
+                    // 未回答扣5分
+                    score -= 5;
+                    feedback += `<p class="incorrect">問題 ${i}: 未回答。正確答案是 ${correctAnswers[questionId]}。</p>`;
+                }
+            }
+            
+            // 顯示結果
+            document.getElementById("score").textContent = `得分: ${score}/100`;
+            document.getElementById("feedback").innerHTML = feedback;
+            document.getElementById("result").style.display = "block";
+            
+            // 滾動到結果區域
+            document.getElementById("result").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>

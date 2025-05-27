@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第五天：當代趨勢與實踐應用</title>
+    <style>
+        /* 投影片基本樣式 */
+        .slide {
+            display: none;
+            padding: 30px;
+            text-align: center;
+            background-color: #fff8e1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 900px;
+        }
+        
+        .slide-title {
+            font-size: 28px;
+            color: #ff8f00;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffcc80;
+            padding-bottom: 10px;
+        }
+        
+        .slide-content {
+            font-size: 20px;
+            color: #e65100;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .slide-image {
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+        
+        .slide-notes {
+            font-size: 16px;
+            color: #7b7b7b;
+            font-style: italic;
+            text-align: left;
+            border-left: 3px solid #ffcc80;
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+        
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .column {
+            flex: 0 0 48%;
+        }
+        
+        .highlight-box {
+            background-color: #ffe0b2;
+            border-left: 4px solid #ffb74d;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .discussion-question {
+            background-color: #ffcc80;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        /* 導航按鈕 */
+        .nav-buttons {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .nav-btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .nav-btn:hover {
+            background-color: #f57c00;
+        }
+        
+        /* 當前投影片指示器 */
+        .slide-indicator {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #ff9800;
+        }
+        
+        /* 顯示當前投影片 */
+        .slide.active {
+            display: block;
+        }
+        
+        /* 列表樣式 */
+        ul, ol {
+            text-align: left;
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-indicator">投影片 <span id="current-slide">1</span> / <span id="total-slides">15</span></div>
+    
+    <div class="nav-buttons">
+        <button class="nav-btn" id="prev-btn">上一頁</button>
+        <button class="nav-btn" id="next-btn">下一頁</button>
+    </div>
+
+    <!-- 投影片 1: 封面 -->
+    <div class="slide active" id="slide-1">
+        <div class="slide-title">第五天：當代趨勢與實踐應用</div>
+        <div class="slide-content" style="text-align: center;">
+            <p style="font-size: 24px;">《Costume Jewelry for Haute Couture》課程</p>
+            <p>基於Florence Muller著作，Patrick Sigal編輯</p>
+            <p style="margin-top: 40px;">上午：當代高級時裝珠寶的創新趨勢</p>
+            <p>下午：珠寶設計與造型搭配</p>
+        </div>
+    </div>
+
+    <!-- 投影片 2: 當代設計趨勢 -->
+    <div class="slide" id="slide-2">
+        <div class="slide-title">當代高級時裝珠寶的設計趨勢</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>美學趨勢</h3>
+                    <ul>
+                        <li>極簡主義回歸：簡約線條與純粹形式的探索</li>
+                        <li>誇張比例：打破傳統尺度的大膽設計</li>
+                        <li>混搭風格：不同時期與風格元素的創意組合</li>
+                        <li>解構主義：重新思考珠寶結構與佩戴方式</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>概念發展</h3>
+                    <ul>
+                        <li>敘事性設計：講述故事或表達理念的珠寶</li>
+                        <li>社會評論：反映社會議題與文化批判</li>
+                        <li>身份表達：個人化與自我認同的珠寶設計</li>
+                        <li>跨界合作：與藝術家、建築師等跨領域創作</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>案例分析</h3>
+                <p>Gucci的Alessandro Michele：復古元素與當代敘事的融合</p>
+                <p>Schiaparelli的Daniel Roseberry：超現實主義的當代詮釋</p>
+                <p>Loewe的Jonathan Anderson：工藝創新與概念性設計</p>
+                <p>Jacquemus的Simon Porte Jacquemus：極簡主義與誇張比例的平衡</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 3: 材質與技術創新 -->
+    <div class="slide" id="slide-3">
+        <div class="slide-title">材質與技術創新</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>新材質探索</h3>
+                    <ul>
+                        <li>可持續材料：再生金屬、環保樹脂、有機材料</li>
+                        <li>高科技材質：3D列印材料、智能材料、光學纖維</li>
+                        <li>混合媒材：傳統與創新材料的意外組合</li>
+                        <li>生物材料：實驗性生物基材料與可降解選項</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>製作技術革新</h3>
+                    <ul>
+                        <li>數位製造：3D建模與列印技術的應用</li>
+                        <li>激光切割：精確複雜圖案的新可能性</li>
+                        <li>智能整合：電子元件與互動功能的加入</li>
+                        <li>傳統工藝復興：古老技術的現代轉化</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>創新案例</h3>
+                <p>Iris van Herpen的3D列印珠寶：突破傳統製作限制的複雜結構</p>
+                <p>Neri Oxman的生物設計：結合生物學與設計的前衛探索</p>
+                <p>Hussein Chalayan的智能珠寶：融合科技與時尚的互動作品</p>
+                <p>Anish Kapoor與JAR合作：藝術家與珠寶設計師的跨界創新</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 4: 可持續發展趨勢 -->
+    <div class="slide" id="slide-4">
+        <div class="slide-title">可持續發展與倫理設計</div>
+        <div class="slide-content">
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: #ffcc80;">
+                    <th style="padding: 10px; border: 1px solid #ff9800; text-align: center;">可持續面向</th>
+                    <th style="padding: 10px; border: 1px solid #ff9800; text-align: center;">傳統做法</th>
+                    <th style="padding: 10px; border: 1px solid #ff9800; text-align: center;">創新解決方案</th>
+                    <th style="padding: 10px; border: 1px solid #ff9800; text-align: center;">品牌案例</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ffcc80; font-weight: bold;">材料來源</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">新開採金屬與石材</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">再生金屬、替代材料</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">Stella McCartney</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ffcc80; font-weight: bold;">生產過程</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">高耗能、高污染</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">低碳製程、零廢棄設計</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">Bottega Veneta</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ffcc80; font-weight: bold;">勞工條件</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">供應鏈不透明</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">公平貿易、透明供應鏈</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">Vivienne Westwood</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ffcc80; font-weight: bold;">產品生命週期</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">季節性淘汰</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">永續設計、修復服務</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">Hermès</td>
+                </tr>
+            </table>
+            <div class="highlight-box">
+                <h3>可持續設計原則</h3>
+                <p>材料選擇：優先考慮環保、可再生、低影響材料</p>
+                <p>設計思維：追求耐久性、多功能性、可修復性</p>
+                <p>生產方式：減少廢棄物、節約能源、優化工藝</p>
+                <p>透明度：提供完整的產品來源與製作過程信息</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 5: 市場與消費趨勢 -->
+    <div class="slide" id="slide-5">
+        <div class="slide-title">市場與消費趨勢</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>消費者行為變化</h3>
+                    <ul>
+                        <li>價值導向：從純粹奢華到意義消費的轉變</li>
+                        <li>個性化需求：定制與獨特性的追求</li>
+                        <li>數位原生代：社交媒體與網紅對珠寶選擇的影響</li>
+                        <li>混合消費：高低價位混搭的新消費模式</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>市場策略創新</h3>
+                    <ul>
+                        <li>直接面向消費者(DTC)：繞過傳統零售渠道</li>
+                        <li>限時系列：創造稀缺性與收藏價值</li>
+                        <li>體驗式零售：實體店面的新角色與體驗</li>
+                        <li>數位展示：虛擬展廳與AR/VR試戴體驗</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>成功案例</h3>
+                <p>Tiffany & Co.的品牌重塑：傳統品牌如何吸引年輕消費者</p>
+                <p>Mejuri的DTC模式：打破高級珠寶的傳統銷售模式</p>
+                <p>Gucci的數位策略：虛擬珠寶與NFT的探索</p>
+                <p>Cartier的可持續承諾：奢侈品牌如何回應消費者的環保意識</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 6: 上午總結 -->
+    <div class="slide" id="slide-6">
+        <div class="slide-title">上午課程總結</div>
+        <div class="slide-content">
+            <h3>當代高級時裝珠寶的創新趨勢</h3>
+            <div class="highlight-box">
+                <ol>
+                    <li>設計趨勢：極簡主義回歸、誇張比例、混搭風格、解構主義</li>
+                    <li>概念發展：敘事性設計、社會評論、身份表達、跨界合作</li>
+                    <li>材質與技術創新：新材質探索、製作技術革新、創新案例</li>
+                    <li>可持續發展與倫理設計：材料來源、生產過程、勞工條件、產品生命週期</li>
+                    <li>市場與消費趨勢：消費者行為變化、市場策略創新、成功案例</li>
+                </ol>
+            </div>
+            <div class="discussion-question">
+                午休前思考：這些當代趨勢如何影響您對高級時裝珠寶的理解與欣賞？您認為哪些趨勢最具未來發展潛力？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 7: 下午課程開場 -->
+    <div class="slide" id="slide-7">
+        <div class="slide-title">下午課程：珠寶設計與造型搭配</div>
+        <div class="slide-content" style="text-align: center;">
+            <p style="font-size: 22px;">我們將探討四個關鍵實踐領域：</p>
+            <div style="margin: 30px 0;">
+                <p style="font-size: 24px; color: #ff8f00; margin: 15px 0;">珠寶與服裝的和諧關係</p>
+                <p style="font-size: 24px; color: #ff8f00; margin: 15px 0;">個人風格與珠寶選擇</p>
+                <p style="font-size: 24px; color: #ff8f00; margin: 15px 0;">場合與情境的珠寶搭配</p>
+                <p style="font-size: 24px; color: #ff8f00; margin: 15px 0;">實用造型技巧與案例</p>
+            </div>
+            <p>通過這些實踐知識，我們將學習如何運用高級時裝珠寶提升整體造型效果</p>
+        </div>
+    </div>
+
+    <!-- 投影片 8: 珠寶與服裝的和諧關係 -->
+    <div class="slide" id="slide-8">
+        <div class="slide-title">珠寶與服裝的和諧關係</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>服裝元素與珠寶選擇</h3>
+                    <ul>
+                        <li>領型與項鍊：不同領口的最佳珠寶搭配</li>
+                        <li>袖型與手鐲：從無袖到長袖的珠寶調整</li>
+                        <li>服裝剪裁與珠寶比例：結構感服裝的珠寶平衡</li>
+                        <li>面料質感與珠寶材質：創造和諧的質感對話</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>色彩協調原則</h3>
+                    <ul>
+                        <li>同色系搭配：創造統一感的色彩延伸</li>
+                        <li>對比色運用：製造焦點與視覺張力</li>
+                        <li>中性色策略：黑白灰與金屬色的百搭特性</li>
+                        <li>季節色彩考量：不同季節的色彩溫度調整</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>經典搭配公式</h3>
+                <p>簡約服裝 + 焦點珠寶：讓珠寶成為造型主角</p>
+                <p>複雜服裝 + 簡約珠寶：平衡整體視覺效果</p>
+                <p>中性色服裝 + 彩色珠寶：創造活力焦點</p>
+                <p>圖案服裝 + 幾何珠寶：呼應設計元素</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 9: 個人風格與珠寶選擇 -->
+    <div class="slide" id="slide-9">
+        <div class="slide-title">個人風格與珠寶選擇</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>風格類型與珠寶特點</h3>
+                    <ul>
+                        <li>經典優雅型：永恆設計、精緻細節、高質感</li>
+                        <li>前衛創意型：實驗性設計、大膽形狀、創新材質</li>
+                        <li>波希米亞型：自然元素、多層次、混搭風格</li>
+                        <li>極簡主義型：簡約線條、幾何形狀、低調質感</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>個人特質考量</h3>
+                    <ul>
+                        <li>身形比例：選擇適合身形的珠寶尺寸與比例</li>
+                        <li>膚色調和：找出最襯托膚色的金屬與寶石色調</li>
+                        <li>生活方式：考慮實用性與日常活動的兼容性</li>
+                        <li>個人喜好：尊重個人審美與舒適度的優先性</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>風格建立策略</h3>
+                <p>核心單品：投資幾件能代表個人風格的標誌性珠寶</p>
+                <p>風格進化：逐步擴展收藏，保持一致性但允許變化</p>
+                <p>個人化詮釋：為經典設計賦予個人穿戴方式</p>
+                <p>情感連結：選擇具有個人意義的設計或元素</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 10: 場合與情境的珠寶搭配 -->
+    <div class="slide" id="slide-10">
+        <div class="slide-title">場合與情境的珠寶搭配</div>
+        <div class="slide-content">
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: #ffcc80;">
+                    <th style="padding: 10px; border: 1px solid #ff9800; text-align: center;">場合</th>
+                    <th style="padding: 10px; border: 1px solid #ff9800; text-align: center;">珠寶選擇</th>
+                    <th style="padding: 10px; border: 1px solid #ff9800; text-align: center;">注意事項</th>
+                    <th style="padding: 10px; border: 1px solid #ff9800; text-align: center;">靈感案例</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ffcc80; font-weight: bold;">職場正式場合</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">簡約設計、適度尺寸</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">避免過度誇張、注重專業感</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">Tilda Swinton的極簡風格</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ffcc80; font-weight: bold;">晚宴與正式活動</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">精緻設計、焦點珠寶</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">與禮服協調、考慮整體平衡</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">Cate Blanchett的紅毯造型</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ffcc80; font-weight: bold;">創意社交場合</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">獨特設計、話題性珠寶</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">展現個性、允許實驗性</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">Iris Apfel的大膽混搭</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ffcc80; font-weight: bold;">日常休閒場合</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">舒適設計、實用性強</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">考慮活動便利性、輕量設計</td>
+                    <td style="padding: 10px; border: 1px solid #ffcc80;">Alexa Chung的隨性優雅</td>
+                </tr>
+            </table>
+            <div class="highlight-box">
+                <h3>場合轉換技巧</h3>
+                <p>多功能設計：選擇可從日間到夜間轉換的珠寶</p>
+                <p>分層策略：基礎珠寶加可拆卸元素，靈活調整</p>
+                <p>焦點轉移：通過更換一件焦點珠寶改變整體風格</p>
+                <p>配件協調：確保珠寶與其他配件(包、鞋)的整體協調</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 11: 實用造型技巧 -->
+    <div class="slide" id="slide-11">
+        <div class="slide-title">實用造型技巧與案例</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>分層與堆疊技巧</h3>
+                    <ul>
+                        <li>項鍊分層：不同長度與風格的和諧組合</li>
+                        <li>手鐲堆疊：創造豐富視覺層次的方法</li>
+                        <li>戒指組合：多枚戒指的平衡分布</li>
+                        <li>混合金屬：不同金屬色調的協調搭配</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>創意佩戴方式</h3>
+                    <ul>
+                        <li>胸針新用法：髮飾、領口裝飾、包包點綴</li>
+                        <li>耳環變化：單邊、不對稱、耳骨佩戴</li>
+                        <li>項鍊轉用：手鍊、髮飾、腰帶裝飾</li>
+                        <li>珠寶疊加：將不同珠寶組合成新造型</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>造型案例分析</h3>
+                <p>Dior 2023春夏秀場：珍珠與金屬混搭的現代詮釋</p>
+                <p>Chanel高級訂製服秀：經典元素的創新佩戴方式</p>
+                <p>時尚編輯街拍：專業人士的日常珠寶搭配智慧</p>
+                <p>名人紅毯造型：焦點珠寶如何提升整體造型</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 12: 造型實踐工作坊 -->
+    <div class="slide" id="slide-12">
+        <div class="slide-title">造型實踐工作坊</div>
+        <div class="slide-content">
+            <h3>造型挑戰</h3>
+            <div class="highlight-box">
+                <p>基礎造型轉變：如何通過更換珠寶改變同一套服裝的風格</p>
+                <p>場合轉換：將同一套珠寶從日間職場調整為晚間社交場合</p>
+                <p>風格混搭：結合不同風格珠寶創造和諧整體效果</p>
+                <p>季節調整：同一件珠寶在不同季節的搭配變化</p>
+            </div>
+            
+            <h3>實用技巧演示</h3>
+            <div class="highlight-box">
+                <p>項鍊長度與領型的黃金比例</p>
+                <p>耳環選擇與臉型的協調關係</p>
+                <p>手鐲與袖型的平衡技巧</p>
+                <p>胸針位置的視覺效果調整</p>
+            </div>
+            
+            <h3>個人風格諮詢</h3>
+            <div class="discussion-question">
+                小組活動：為不同風格、場合與需求的案例人物設計完整的珠寶搭配方案
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 13: 課程總結與未來展望 -->
+    <div class="slide" id="slide-13">
+        <div class="slide-title">課程總結與未來展望</div>
+        <div class="slide-content">
+            <h3>五天課程重點回顧</h3>
+            <div class="highlight-box">
+                <ol>
+                    <li>高級時裝珠寶的歷史與演變：從配角到主角的發展歷程</li>
+                    <li>材質與工藝：傳統與創新技術的融合與應用</li>
+                    <li>設計美學與品牌特色：不同時裝屋的設計語言與風格</li>
+                    <li>收藏與鑑賞：專業收藏知識與鑑定技巧</li>
+                    <li>當代趨勢與實踐應用：創新發展與實用搭配技巧</li>
+                </ol>
+            </div>
+            
+            <h3>未來發展方向</h3>
+            <div class="highlight-box">
+                <p>數位化與虛擬珠寶：AR/VR技術與NFT的發展</p>
+                <p>可持續創新：環保材料與循環設計的進一步探索</p>
+                <p>跨界融合：珠寶與科技、藝術、建築等領域的深度合作</p>
+                <p>個人化定制：數位技術賦能的個性化設計與生產</p>
+            </div>
+            
+            <div class="discussion-question">
+                反思：這門課程如何改變了您對高級時裝珠寶的理解與欣賞方式？您將如何應用所學知識？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 14: 延伸學習資源 -->
+    <div class="slide" id="slide-14">
+        <div class="slide-title">延伸學習資源</div>
+        <div class="slide-content">
+            <h3>進階閱讀</h3>
+            <ul>
+                <li>《The Jewelry of Ideas: The Susan Grant Lewin Collection》</li>
+                <li>《Fashion Jewelry: The Collection of Barbara Berger》</li>
+                <li>《Jewelry by Artists: In the Studio, 1940-2000》</li>
+                <li>《Unexpected Pleasures: The Art and Design of Contemporary Jewelry》</li>
+            </ul>
+            
+            <h3>線上資源</h3>
+            <ul>
+                <li>Current Obsession: 當代珠寶設計平台與雜誌</li>
+                <li>The Jewelry Library: 珠寶設計資源與檔案</li>
+                <li>Klimt02: 國際藝術珠寶網絡</li>
+                <li>主要時裝週與珠寶展覽的線上報導</li>
+            </ul>
+            
+            <h3>進階課程與工作坊</h3>
+            <ul>
+                <li>Central Saint Martins的珠寶設計課程</li>
+                <li>Alchimia當代珠寶學校的專業工作坊</li>
+                <li>主要博物館與藝術機構的珠寶設計講座</li>
+                <li>品牌舉辦的高級時裝珠寶鑑賞活動</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 投影片 15: 課程結語 -->
+    <div class="slide" id="slide-15">
+        <div class="slide-title">課程結語</div>
+        <div class="slide-content">
+            <div class="highlight-box" style="text-align: center; padding: 30px; margin: 20px 0;">
+                <p style="font-size: 24px; margin-bottom: 20px;">「高級時裝珠寶不僅是裝飾品，更是時代精神的體現、設計師理念的表達、工藝傳承的載體。」</p>
+                <p style="font-size: 20px;">— Florence Muller</p>
+            </div>
+            
+            <div class="highlight-box">
+                <p>通過這五天的課程，我們已經探索了高級時裝珠寶的豐富世界：從其歷史起源到當代創新，從材質工藝到設計美學，從品牌特色到實用搭配。</p>
+                <p>希望這些知識能幫助您以更深入的眼光欣賞高級時裝珠寶，理解其中蘊含的藝術價值與文化意義，並在個人穿著與收藏中做出更有見地的選擇。</p>
+                <p>珠寶不僅是我們佩戴的物品，更是我們表達自我、連結歷史與擁抱未來的方式。</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="font-size: 24px; color: #ff8f00;">感謝您的參與！</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 投影片導航功能
+        let currentSlide = 1;
+        const totalSlides = 15;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(slideNumber) {
+            // 隱藏所有投影片
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // 顯示當前投影片
+            document.getElementById('slide-' + slideNumber).classList.add('active');
+            document.getElementById('current-slide').textContent = slideNumber;
+        }
+        
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+        
+        document.getElementById('next-btn').addEventListener('click', function() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+        
+        // 鍵盤導航
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

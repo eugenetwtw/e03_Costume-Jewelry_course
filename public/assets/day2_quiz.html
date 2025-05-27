@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二天測驗：材質與工藝</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e8f5e9;
+        }
+        
+        h1 {
+            color: #2e7d32;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 10px;
+        }
+        
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #a5d6a7;
+        }
+        
+        .question h3 {
+            color: #1b5e20;
+            margin-bottom: 15px;
+        }
+        
+        .options {
+            margin-left: 20px;
+        }
+        
+        .option {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .option input {
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .option label {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #388e3c;
+        }
+        
+        .result {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f1f8e9;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .feedback {
+            margin-top: 20px;
+        }
+        
+        .correct {
+            color: #2e7d32;
+        }
+        
+        .incorrect {
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <h1>第二天測驗：材質與工藝</h1>
+    
+    <div class="quiz-container">
+        <form id="quiz-form">
+            <div class="question" id="q1">
+                <h3>1. 高級時裝珠寶常用的基礎金屬材質包括哪些？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1a" value="A">
+                        <label for="q1a">A. 純金、純銀、鉑金</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1b" value="B">
+                        <label for="q1b">B. 黃銅、白銅、鋁、鋅合金</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1c" value="C">
+                        <label for="q1c">C. 鈦、鎢、鉻</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1d" value="D">
+                        <label for="q1d">D. 鐵、鉛、錫</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q2">
+                <h3>2. 下列哪種材質在1930-40年代的高級時裝珠寶中廣泛使用，被視為早期塑料的代表？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2a" value="A">
+                        <label for="q2a">A. 亞克力(Acrylic)</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2b" value="B">
+                        <label for="q2b">B. 環氧樹脂(Epoxy)</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2c" value="C">
+                        <label for="q2c">C. 酚醛樹脂(Bakelite)</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2d" value="D">
+                        <label for="q2d">D. 聚氯乙烯(PVC)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q3">
+                <h3>3. 如何通過視覺特徵辨別施華洛世奇水晶？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3a" value="A">
+                        <label for="q3a">A. 顏色偏黃，表面有細小氣泡</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3b" value="B">
+                        <label for="q3b">B. 高折射率，精確切割，閃亮光澤</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3c" value="C">
+                        <label for="q3c">C. 表面粗糙，邊緣不規則</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3d" value="D">
+                        <label for="q3d">D. 完全不透明，呈現啞光效果</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q4">
+                <h3>4. 下列哪位設計師以金屬片與塑料組合的前衛設計聞名，打破了傳統珠寶的界限？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4a" value="A">
+                        <label for="q4a">A. Coco Chanel</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4b" value="B">
+                        <label for="q4b">B. Christian Dior</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4c" value="C">
+                        <label for="q4c">C. Paco Rabanne</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4d" value="D">
+                        <label for="q4d">D. Hubert de Givenchy</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q5">
+                <h3>5. 高級時裝珠寶中常用的鑄造技術包括哪些？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5a" value="A">
+                        <label for="q5a">A. 失蠟鑄造、砂模鑄造、壓鑄技術</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5b" value="B">
+                        <label for="q5b">B. 3D列印、激光切割、數控加工</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5c" value="C">
+                        <label for="q5c">C. 鍛造、錘打、拉絲</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5d" value="D">
+                        <label for="q5d">D. 電鍍、氧化、拋光</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q6">
+                <h3>6. 下列哪種鑲嵌技術最適合需要安全固定寶石且金屬完全包圍寶石邊緣的設計？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6a" value="A">
+                        <label for="q6a">A. 爪鑲</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6b" value="B">
+                        <label for="q6b">B. 包鑲</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6c" value="C">
+                        <label for="q6c">C. 槽鑲</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6d" value="D">
+                        <label for="q6d">D. 無鑲嵌</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q7">
+                <h3>7. 珐瑯工藝在高級時裝珠寶中的應用屬於哪種表面處理技術？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7a" value="A">
+                        <label for="q7a">A. 表面紋理處理</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7b" value="B">
+                        <label for="q7b">B. 色彩處理</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7c" value="C">
+                        <label for="q7c">C. 鑲邊與包邊</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7d" value="D">
+                        <label for="q7d">D. 焊接與黏合</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q8">
+                <h3>8. 在材質辨識中，酚醛樹脂(Bakelite)的特點是什麼？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8a" value="A">
+                        <label for="q8a">A. 透明或半透明，非常輕，容易刮傷</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8b" value="B">
+                        <label for="q8b">B. 金黃色，會氧化變暗，重量較重</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8c" value="C">
+                        <label for="q8c">C. 深沉色彩，不透明，溫暖觸感，輕微紋理</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8d" value="D">
+                        <label for="q8d">D. 高折射率，冰冷觸感，表面可能刮傷</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q9">
+                <h3>9. 下列哪種組裝方法在高級時裝珠寶中被視為機械連接的美學表現？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9a" value="A">
+                        <label for="q9a">A. 焊接</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9b" value="B">
+                        <label for="q9b">B. 黏合</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9c" value="C">
+                        <label for="q9c">C. 鉚釘與螺絲</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9d" value="D">
+                        <label for="q9d">D. 壓力固定</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q10">
+                <h3>10. 傳統與現代技術的結合如何影響高級時裝珠寶的發展？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10a" value="A">
+                        <label for="q10a">A. 完全放棄傳統工藝，全面採用現代技術</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10b" value="B">
+                        <label for="q10b">B. 拒絕使用現代技術，只保留傳統工藝</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10c" value="C">
+                        <label for="q10c">C. 將傳統工藝與現代技術結合，創造新的設計可能性與效率</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10d" value="D">
+                        <label for="q10d">D. 傳統與現代技術完全分離，用於不同類型的珠寶</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" class="submit-btn" onclick="calculateScore()">提交測驗</button>
+        </form>
+        
+        <div class="result" id="result">
+            <div class="score" id="score"></div>
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </div>
+    
+    <script>
+        // 正確答案
+        const correctAnswers = {
+            q1: "B",
+            q2: "C",
+            q3: "B",
+            q4: "C",
+            q5: "A",
+            q6: "B",
+            q7: "B",
+            q8: "C",
+            q9: "C",
+            q10: "C"
+        };
+        
+        function calculateScore() {
+            let score = 100;
+            let feedback = "";
+            let answeredQuestions = 0;
+            
+            // 檢查每個問題
+            for (let i = 1; i <= 10; i++) {
+                const questionId = "q" + i;
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                
+                if (selectedOption) {
+                    answeredQuestions++;
+                    const userAnswer = selectedOption.value;
+                    
+                    if (userAnswer !== correctAnswers[questionId]) {
+                        // 答錯扣10分
+                        score -= 10;
+                        feedback += `<p class="incorrect">問題 ${i}: 不正確。正確答案是 ${correctAnswers[questionId]}。</p>`;
+                    } else {
+                        feedback += `<p class="correct">問題 ${i}: 正確!</p>`;
+                    }
+                } else {
+                    // 未回答扣5分
+                    score -= 5;
+                    feedback += `<p class="incorrect">問題 ${i}: 未回答。正確答案是 ${correctAnswers[questionId]}。</p>`;
+                }
+            }
+            
+            // 顯示結果
+            document.getElementById("score").textContent = `得分: ${score}/100`;
+            document.getElementById("feedback").innerHTML = feedback;
+            document.getElementById("result").style.display = "block";
+            
+            // 滾動到結果區域
+            document.getElementById("result").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>

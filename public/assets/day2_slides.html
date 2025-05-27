@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二天：材質與工藝</title>
+    <style>
+        /* 投影片基本樣式 */
+        .slide {
+            display: none;
+            padding: 30px;
+            text-align: center;
+            background-color: #f0f7f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 900px;
+        }
+        
+        .slide-title {
+            font-size: 28px;
+            color: #2e7d32;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 10px;
+        }
+        
+        .slide-content {
+            font-size: 20px;
+            color: #1b5e20;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .slide-image {
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+        
+        .slide-notes {
+            font-size: 16px;
+            color: #7b7b7b;
+            font-style: italic;
+            text-align: left;
+            border-left: 3px solid #a5d6a7;
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+        
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .column {
+            flex: 0 0 48%;
+        }
+        
+        .highlight-box {
+            background-color: #e8f5e9;
+            border-left: 4px solid #81c784;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .discussion-question {
+            background-color: #c8e6c9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        /* 導航按鈕 */
+        .nav-buttons {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .nav-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .nav-btn:hover {
+            background-color: #388e3c;
+        }
+        
+        /* 當前投影片指示器 */
+        .slide-indicator {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #4caf50;
+        }
+        
+        /* 顯示當前投影片 */
+        .slide.active {
+            display: block;
+        }
+        
+        /* 列表樣式 */
+        ul, ol {
+            text-align: left;
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-indicator">投影片 <span id="current-slide">1</span> / <span id="total-slides">15</span></div>
+    
+    <div class="nav-buttons">
+        <button class="nav-btn" id="prev-btn">上一頁</button>
+        <button class="nav-btn" id="next-btn">下一頁</button>
+    </div>
+
+    <!-- 投影片 1: 封面 -->
+    <div class="slide active" id="slide-1">
+        <div class="slide-title">第二天：材質與工藝</div>
+        <div class="slide-content" style="text-align: center;">
+            <p style="font-size: 24px;">《Costume Jewelry for Haute Couture》課程</p>
+            <p>基於Florence Muller著作，Patrick Sigal編輯</p>
+            <p style="margin-top: 40px;">上午：高級時裝珠寶的常用材質</p>
+            <p>下午：製作工藝與技術</p>
+        </div>
+    </div>
+
+    <!-- 投影片 2: 金屬材質介紹 -->
+    <div class="slide" id="slide-2">
+        <div class="slide-title">金屬材質：黃銅、鍍金、鍍銀技術</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>基礎金屬</h3>
+                    <ul>
+                        <li>黃銅(Brass)：銅鋅合金，具有金色外觀</li>
+                        <li>白銅(Nickel Silver)：銅鎳鋅合金，銀白色外觀</li>
+                        <li>鋁(Aluminum)：輕量化選擇，1950-60年代流行</li>
+                        <li>鋅合金(Zinc Alloy)：經濟實惠，適合複雜鑄造</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>表面處理技術</h3>
+                    <ul>
+                        <li>鍍金技術：電鍍金、金箔貼合、金漆</li>
+                        <li>鍍銀工藝：電鍍銀、銀漆、拋光處理</li>
+                        <li>仿古處理：人工氧化、做舊處理</li>
+                        <li>彩色電鍍：黑色、彩虹色等特殊效果</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>案例研究</h3>
+                <p>Chanel的鍍金鏈條工藝演變：從早期的厚重鍍金到現代的多層次電鍍技術</p>
+                <p>Dior的多層次電鍍技術：創造出豐富的金屬質感層次</p>
+                <p>YSL的仿古金屬處理：賦予現代珠寶歷史感與藝術氣息</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 3: 寶石替代品 -->
+    <div class="slide" id="slide-3">
+        <div class="slide-title">寶石替代品：水晶、玻璃、樹脂</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>水晶與玻璃</h3>
+                    <ul>
+                        <li>施華洛世奇水晶：精確切割、高折射率</li>
+                        <li>捷克玻璃珠：歐洲傳統工藝，多彩多姿</li>
+                        <li>威尼斯玻璃：千年工藝，獨特的熔合技術</li>
+                        <li>壓模玻璃：模具成型，可大量生產</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>樹脂與塑料</h3>
+                    <ul>
+                        <li>酚醛樹脂(Bakelite)：早期塑料，1930-40年代流行</li>
+                        <li>醋酸纖維素(Celluloid)：可塑性強，能模仿象牙</li>
+                        <li>亞克力(Acrylic)：透明度高，類似水晶效果</li>
+                        <li>環氧樹脂(Epoxy)：可包埋物體創造特殊效果</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="discussion-question">
+                討論：為什麼高級時裝珠寶設計師選擇使用這些替代材料，而非真正的寶石？這些選擇如何影響設計表達？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 4: 材質辨識 -->
+    <div class="slide" id="slide-4">
+        <div class="slide-title">材質辨識與特性</div>
+        <div class="slide-content">
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: #c8e6c9;">
+                    <th style="padding: 10px; border: 1px solid #81c784; text-align: center;">材質</th>
+                    <th style="padding: 10px; border: 1px solid #81c784; text-align: center;">視覺特徵</th>
+                    <th style="padding: 10px; border: 1px solid #81c784; text-align: center;">觸感</th>
+                    <th style="padding: 10px; border: 1px solid #81c784; text-align: center;">重量</th>
+                    <th style="padding: 10px; border: 1px solid #81c784; text-align: center;">老化特點</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7; font-weight: bold;">黃銅</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">金黃色，會氧化變暗</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">冰冷，光滑</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">重</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">綠銹，氧化變色</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7; font-weight: bold;">施華洛世奇水晶</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">高折射率，閃亮</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">冰冷，光滑</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">中等</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">表面可能刮傷</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7; font-weight: bold;">酚醛樹脂</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">深沉色彩，不透明</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">溫暖，輕微紋理</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">輕</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">可能變色，開裂</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7; font-weight: bold;">亞克力</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">透明或半透明</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">輕微溫暖，光滑</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">非常輕</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">容易刮傷，黃變</td>
+                </tr>
+            </table>
+            <div class="highlight-box">
+                <p>「材質辨識是收藏與鑑賞高級時裝珠寶的基礎技能，也是理解設計師意圖的關鍵。」</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 5: 創新材料 -->
+    <div class="slide" id="slide-5">
+        <div class="slide-title">創新材料：非傳統選擇</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>非傳統材料的革命</h3>
+                    <ul>
+                        <li>紡織材料：絲帶、蕾絲、繩索</li>
+                        <li>皮革元素：從Hermès到現代設計</li>
+                        <li>木材與竹子：自然材質的運用</li>
+                        <li>回收材料：可持續發展嘗試</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>實驗性材料</h3>
+                    <ul>
+                        <li>工業材料：橡膠、塑料管、工業零件</li>
+                        <li>發光材料：夜光粉、LED、光纖</li>
+                        <li>智能材料：對溫度、光線變化的材料</li>
+                        <li>3D打印材料：數位設計與新型製造</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>案例分析</h3>
+                <p>Paco Rabanne的金屬片與塑料組合：打破傳統珠寶界限的前衛設計</p>
+                <p>Marni的木質與樹脂混搭：自然與人工材質的和諧對話</p>
+                <p>當代設計師的實驗性材料：從工業廢料到生物可降解材料的創新應用</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 6: 上午總結 -->
+    <div class="slide" id="slide-6">
+        <div class="slide-title">上午課程總結</div>
+        <div class="slide-content">
+            <h3>高級時裝珠寶的常用材質</h3>
+            <div class="highlight-box">
+                <ol>
+                    <li>金屬材質：黃銅、白銅、鋁、鋅合金等基礎金屬，以及各種表面處理技術</li>
+                    <li>寶石替代品：水晶、玻璃、樹脂等材料，提供多樣化的視覺效果</li>
+                    <li>創新材料：從紡織品到工業材料，設計師不斷拓展材質邊界</li>
+                    <li>材質辨識：通過視覺、觸感、重量等特性辨別不同材質</li>
+                </ol>
+            </div>
+            <div class="discussion-question">
+                午休前思考：材質選擇如何影響珠寶的設計表達、穿戴體驗與市場定位？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 7: 下午課程開場 -->
+    <div class="slide" id="slide-7">
+        <div class="slide-title">下午課程：製作工藝與技術</div>
+        <div class="slide-content" style="text-align: center;">
+            <p style="font-size: 22px;">我們將探討四個關鍵工藝領域：</p>
+            <div style="margin: 30px 0;">
+                <p style="font-size: 24px; color: #2e7d32; margin: 15px 0;">鑄造與沖壓技術</p>
+                <p style="font-size: 24px; color: #2e7d32; margin: 15px 0;">鑲嵌與組裝方法</p>
+                <p style="font-size: 24px; color: #2e7d32; margin: 15px 0;">表面處理與裝飾技巧</p>
+                <p style="font-size: 24px; color: #2e7d32; margin: 15px 0;">工作坊參觀：製作示範</p>
+            </div>
+            <p>通過這些工藝技術的學習，我們將理解高級時裝珠寶從設計到成品的完整過程</p>
+        </div>
+    </div>
+
+    <!-- 投影片 8: 鑄造工藝 -->
+    <div class="slide" id="slide-8">
+        <div class="slide-title">鑄造與沖壓技術</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>鑄造工藝</h3>
+                    <ul>
+                        <li>失蠟鑄造：傳統精密鑄造技術的工業應用</li>
+                        <li>砂模鑄造：適合大型裝飾件的製作</li>
+                        <li>壓鑄技術：高效率生產複雜形狀的金屬配件</li>
+                        <li>鑄造缺陷與修復：常見問題與解決方案</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>沖壓與切割</h3>
+                    <ul>
+                        <li>金屬沖壓：平面金屬的立體成型</li>
+                        <li>雕刻與鏤空：創造精細圖案的技術</li>
+                        <li>激光切割：現代精密切割技術</li>
+                        <li>水刀切割：處理特殊材料的方法</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>工藝演示</h3>
+                <p>失蠟鑄造過程：從蠟模製作、包埋、燒結到金屬澆注的完整流程</p>
+                <p>不同時期鑄造技術的成品比較：從手工鑄造到現代壓鑄的演變</p>
+                <p>手工與機械沖壓的差異：精確度、效率與藝術表現的平衡</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 9: 鑲嵌技術 -->
+    <div class="slide" id="slide-9">
+        <div class="slide-title">鑲嵌與組裝方法</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>鑲嵌技術</h3>
+                    <ul>
+                        <li>爪鑲：經典的寶石固定方式</li>
+                        <li>包鑲：完全包圍寶石邊緣的安全鑲法</li>
+                        <li>槽鑲：將寶石嵌入金屬槽中的技術</li>
+                        <li>無鑲嵌技術：通過壓力或黏合固定寶石</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>組裝方法</h3>
+                    <ul>
+                        <li>焊接與黏合：不同材料的連接技術</li>
+                        <li>鉚釘與螺絲：機械連接的美學表現</li>
+                        <li>鏈條製作：不同風格鏈條的組裝技術</li>
+                        <li>活動結構：創造可動部件的工藝挑戰</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>經典案例</h3>
+                <p>Chanel的多層次鑲嵌技術：將水晶與珍珠組合在金屬框架中</p>
+                <p>Schiaparelli的活動結構設計：創造具有動態效果的珠寶作品</p>
+                <p>現代設計師的混合鑲嵌法：結合多種技術創造豐富視覺層次</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 10: 鑲嵌技術比較 -->
+    <div class="slide" id="slide-10">
+        <div class="slide-title">鑲嵌技術比較</div>
+        <div class="slide-content">
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: #c8e6c9;">
+                    <th style="padding: 10px; border: 1px solid #81c784; text-align: center;">鑲嵌方式</th>
+                    <th style="padding: 10px; border: 1px solid #81c784; text-align: center;">特點</th>
+                    <th style="padding: 10px; border: 1px solid #81c784; text-align: center;">適用場景</th>
+                    <th style="padding: 10px; border: 1px solid #81c784; text-align: center;">視覺效果</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7; font-weight: bold;">爪鑲</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">使用金屬爪固定寶石</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">突出單顆寶石的設計</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">寶石更加突出，光線充分</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7; font-weight: bold;">包鑲</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">金屬完全包圍寶石邊緣</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">需要安全固定的設計</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">寶石與金屬融為一體</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7; font-weight: bold;">槽鑲</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">將寶石嵌入金屬槽中</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">多顆寶石排列的設計</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">整齊有序，強調圖案</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7; font-weight: bold;">無鑲嵌</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">通過壓力或黏合固定</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">現代簡約設計</td>
+                    <td style="padding: 10px; border: 1px solid #a5d6a7;">無明顯金屬框架，乾淨</td>
+                </tr>
+            </table>
+            <div class="discussion-question">
+                討論：不同的鑲嵌技術如何影響珠寶的整體風格與表達？請舉例說明。
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 11: 表面處理 -->
+    <div class="slide" id="slide-11">
+        <div class="slide-title">表面處理與裝飾技巧</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>表面紋理</h3>
+                    <ul>
+                        <li>拋光技術：從粗磨到鏡面的處理過程</li>
+                        <li>磨砂效果：創造柔和質感的方法</li>
+                        <li>錘擊紋理：手工質感的表現</li>
+                        <li>雕刻與浮雕：立體圖案的創作技術</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>色彩處理</h3>
+                    <ul>
+                        <li>珐瑯工藝：傳統與現代珐瑯應用</li>
+                        <li>漆器技術：東方漆藝的西方轉化</li>
+                        <li>彩繪與印刷：圖案轉移的多種方式</li>
+                        <li>氧化與做舊：創造時間感的化學處理</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>裝飾細節</h3>
+                <p>鑲邊與包邊：邊緣處理的精細工藝，增加作品完整感</p>
+                <p>顆粒與絲工藝：古老金工技術在現代的應用，創造豐富質感</p>
+                <p>鏈條與流蘇：動態元素的製作技巧，增加珠寶的活力感</p>
+                <p>混合媒材：不同材質的和諧組合，創造獨特視覺效果</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 12: 工作坊參觀 -->
+    <div class="slide" id="slide-12">
+        <div class="slide-title">工作坊參觀：高級時裝珠寶製作示範</div>
+        <div class="slide-content">
+            <h3>現場或視頻示範</h3>
+            <div class="highlight-box">
+                <p>一件高級時裝珠寶從設計到完成的全過程展示</p>
+                <p>關鍵工藝步驟的特寫展示：鑄造、鑲嵌、拋光、組裝等</p>
+                <p>常見問題與解決方案的分享：材料選擇、工藝調整、品質控制</p>
+            </div>
+            
+            <h3>工具認識</h3>
+            <div class="highlight-box">
+                <p>傳統珠寶製作工具：錘子、鉗子、銼刀、焊槍等基本工具</p>
+                <p>現代設備：3D打印機、激光切割機、電鍍設備等技術輔助</p>
+                <p>工作室設置與安全注意事項：通風、照明、防護措施</p>
+            </div>
+            
+            <div class="discussion-question">
+                觀察問題：在製作過程中，哪些步驟最能體現高級時裝珠寶的工藝特點？為什麼？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 13: 課堂活動 -->
+    <div class="slide" id="slide-13">
+        <div class="slide-title">課堂活動與討論</div>
+        <div class="slide-content">
+            <h3>小組討論：材質選擇如何影響設計表達與穿戴體驗</h3>
+            <div class="highlight-box">
+                <p>每組選擇一種材質組合，討論其優缺點與設計可能性</p>
+                <p>分析不同材質對珠寶重量、舒適度、耐用性的影響</p>
+                <p>探討材質選擇如何反映設計師的美學理念</p>
+            </div>
+            
+            <h3>案例分析：解構一件複雜高級時裝珠寶的製作工藝</h3>
+            <div class="highlight-box">
+                <p>分析其材質組合、製作技術與結構設計</p>
+                <p>討論工藝選擇背後的設計考量</p>
+                <p>探討如何在保持美感的同時確保穿戴舒適性</p>
+            </div>
+            
+            <h3>創意思考：傳統工藝與現代技術的結合</h3>
+            <div class="discussion-question">
+                如何將傳統珠寶工藝與現代技術（如3D打印、智能材料）結合，創造創新的高級時裝珠寶？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 14: 延伸閱讀 -->
+    <div class="slide" id="slide-14">
+        <div class="slide-title">延伸閱讀與資源</div>
+        <div class="slide-content">
+            <h3>專業珠寶製作工藝書籍</h3>
+            <ul>
+                <li>《The Theory and Practice of Goldsmithing》by Erhard Brepohl</li>
+                <li>《Jewelry: Fundamentals of Metalsmithing》by Tim McCreight</li>
+                <li>《The Complete Metalsmith》by Tim McCreight</li>
+            </ul>
+            
+            <h3>線上工藝教學資源</h3>
+            <ul>
+                <li>Jewelry Making Daily: 專業珠寶製作技術教學網站</li>
+                <li>Ganoksin: 珠寶工藝知識庫與論壇</li>
+                <li>YouTube專業珠寶製作頻道: Andrew Berry, Nancy Hamilton等</li>
+            </ul>
+            
+            <h3>材料與工具資訊</h3>
+            <ul>
+                <li>Rio Grande: 專業珠寶材料與工具供應商</li>
+                <li>Swarovski Professional: 水晶元素專業資源</li>
+                <li>Gesswein: 專業珠寶製作工具</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 投影片 15: 第二天總結 -->
+    <div class="slide" id="slide-15">
+        <div class="slide-title">第二天課程總結</div>
+        <div class="slide-content">
+            <h3>今日重點回顧</h3>
+            <div class="highlight-box">
+                <ol>
+                    <li>高級時裝珠寶的常用材質：金屬、寶石替代品與創新材料</li>
+                    <li>材質辨識與特性：視覺、觸感、重量與老化特點</li>
+                    <li>鑄造與沖壓技術：從傳統到現代的製作方法</li>
+                    <li>鑲嵌與組裝方法：不同技術的特點與應用</li>
+                    <li>表面處理與裝飾技巧：創造豐富視覺效果的工藝</li>
+                </ol>
+            </div>
+            
+            <h3>明日預告：設計美學與品牌特色</h3>
+            <div class="highlight-box">
+                <p>上午：高級時裝珠寶的設計原則</p>
+                <p>下午：著名時裝屋的珠寶風格</p>
+                <p>請預習相關材料，並思考不同品牌如何通過珠寶設計表達其獨特風格</p>
+            </div>
+            
+            <div class="discussion-question">
+                反思：今天學習的材質與工藝知識如何幫助您更深入理解高級時裝珠寶的價值與魅力？
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 投影片導航功能
+        let currentSlide = 1;
+        const totalSlides = 15;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(slideNumber) {
+            // 隱藏所有投影片
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // 顯示當前投影片
+            document.getElementById('slide-' + slideNumber).classList.add('active');
+            document.getElementById('current-slide').textContent = slideNumber;
+        }
+        
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+        
+        document.getElementById('next-btn').addEventListener('click', function() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+        
+        // 鍵盤導航
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

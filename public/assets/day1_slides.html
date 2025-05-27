@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一天：高級時裝珠寶的歷史與演變</title>
+    <style>
+        /* 投影片基本樣式 */
+        .slide {
+            display: none;
+            padding: 30px;
+            text-align: center;
+            background-color: #f9f4ef;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 900px;
+        }
+        
+        .slide-title {
+            font-size: 28px;
+            color: #6d4c41;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d7ccc8;
+            padding-bottom: 10px;
+        }
+        
+        .slide-content {
+            font-size: 20px;
+            color: #5d4037;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .slide-image {
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+        
+        .slide-notes {
+            font-size: 16px;
+            color: #7b7b7b;
+            font-style: italic;
+            text-align: left;
+            border-left: 3px solid #d7ccc8;
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+        
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .column {
+            flex: 0 0 48%;
+        }
+        
+        .highlight-box {
+            background-color: #efebe9;
+            border-left: 4px solid #a1887f;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .discussion-question {
+            background-color: #d7ccc8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        /* 導航按鈕 */
+        .nav-buttons {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .nav-btn {
+            background-color: #8d6e63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6d4c41;
+        }
+        
+        /* 當前投影片指示器 */
+        .slide-indicator {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #8d6e63;
+        }
+        
+        /* 顯示當前投影片 */
+        .slide.active {
+            display: block;
+        }
+        
+        /* 列表樣式 */
+        ul, ol {
+            text-align: left;
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-indicator">投影片 <span id="current-slide">1</span> / <span id="total-slides">15</span></div>
+    
+    <div class="nav-buttons">
+        <button class="nav-btn" id="prev-btn">上一頁</button>
+        <button class="nav-btn" id="next-btn">下一頁</button>
+    </div>
+
+    <!-- 投影片 1: 封面 -->
+    <div class="slide active" id="slide-1">
+        <div class="slide-title">第一天：高級時裝珠寶的歷史與演變</div>
+        <div class="slide-content" style="text-align: center;">
+            <p style="font-size: 24px;">《Costume Jewelry for Haute Couture》課程</p>
+            <p>基於Florence Muller著作，Patrick Sigal編輯</p>
+            <p style="margin-top: 40px;">上午：高級時裝珠寶的定義與起源</p>
+            <p>下午：重要設計師與時代風格</p>
+        </div>
+    </div>
+
+    <!-- 投影片 2: 什麼是高級時裝珠寶 -->
+    <div class="slide" id="slide-2">
+        <div class="slide-title">什麼是高級時裝珠寶(Costume Jewelry for Haute Couture)</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>核心概念</h3>
+                    <ul>
+                        <li>專為高級訂製服裝設計的非貴重金屬或寶石製成的裝飾品</li>
+                        <li>注重設計感、藝術性和與服裝的整體協調</li>
+                        <li>強化時裝的風格表達，完成設計師的整體美學願景</li>
+                        <li>從配角到主角的演變，成為時尚產業中不可或缺的元素</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="highlight-box">
+                        <h3>經典案例</h3>
+                        <p>Chanel早期珍珠與水晶組合項鍊</p>
+                        <p>Schiaparelli的昆蟲與自然元素胸針系列</p>
+                        <p>Van Cleef & Arpels為時裝秀設計的仿製版高級珠寶</p>
+                    </div>
+                </div>
+            </div>
+            <div class="discussion-question">
+                討論：高級時裝珠寶如何改變了人們對珠寶價值的傳統認知？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 3: 與傳統珠寶的區別 -->
+    <div class="slide" id="slide-3">
+        <div class="slide-title">與傳統珠寶的區別</div>
+        <div class="slide-content">
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: #d7ccc8;">
+                    <th style="padding: 10px; border: 1px solid #a1887f; text-align: center;">比較面向</th>
+                    <th style="padding: 10px; border: 1px solid #a1887f; text-align: center;">高級珠寶</th>
+                    <th style="padding: 10px; border: 1px solid #a1887f; text-align: center;">高級時裝珠寶</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8; font-weight: bold;">材質</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">貴金屬與寶石</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">多元替代材料</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8; font-weight: bold;">設計理念</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">永恆與投資價值</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">創新與時代精神</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8; font-weight: bold;">製作方式</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">多為手工打造</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">手工與機械生產結合</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8; font-weight: bold;">更新頻率</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">設計週期長</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">隨季節與流行趨勢快速更迭</td>
+                </tr>
+            </table>
+            <div class="discussion-question">
+                思考問題：為何某些設計師選擇在高級時裝中使用時裝珠寶而非真品珠寶？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 4: 早期高級時裝珠寶的歷史背景 -->
+    <div class="slide" id="slide-4">
+        <div class="slide-title">早期高級時裝珠寶的歷史背景(19世紀末至20世紀初)</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>社會文化背景</h3>
+                    <ul>
+                        <li>工業革命影響：新材料與製造技術的出現</li>
+                        <li>社會階層變化：中產階級崛起與消費文化的發展</li>
+                        <li>藝術運動影響：新藝術運動(Art Nouveau)與裝飾藝術(Art Deco)對珠寶設計的影響</li>
+                        <li>時尚產業形成：高級訂製服(Haute Couture)的興起與珠寶的配套發展</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>重要里程碑</h3>
+                    <ul>
+                        <li>1860年代：人造寶石技術的突破</li>
+                        <li>1890年代：Lalique等設計師開始使用非傳統材料</li>
+                        <li>1910年代：Paul Poiret將東方元素引入珠寶設計</li>
+                        <li>1920年代：第一次世界大戰後的社會解放與珠寶風格的革新</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <p>「高級時裝珠寶的發展與社會變革、藝術運動和技術進步密不可分，它不僅是裝飾品，更是時代精神的體現。」</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 5: 上午總結 -->
+    <div class="slide" id="slide-5">
+        <div class="slide-title">上午課程總結</div>
+        <div class="slide-content">
+            <h3>高級時裝珠寶的定義與起源</h3>
+            <div class="highlight-box">
+                <ol>
+                    <li>高級時裝珠寶是專為高級訂製服裝設計的非貴重金屬或寶石製成的裝飾品，注重設計感與藝術性</li>
+                    <li>與傳統珠寶在材質、設計理念、製作方式和更新頻率上有明顯區別</li>
+                    <li>19世紀末至20世紀初的社會變革、藝術運動和技術進步促成了高級時裝珠寶的誕生與發展</li>
+                    <li>從配角到主角的演變，成為時尚產業中不可或缺的元素</li>
+                </ol>
+            </div>
+            <div class="discussion-question">
+                午休前思考：高級時裝珠寶如何反映了其所處時代的社會文化特點？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 6: 下午課程開場 -->
+    <div class="slide" id="slide-6">
+        <div class="slide-title">下午課程：重要設計師與時代風格</div>
+        <div class="slide-content" style="text-align: center;">
+            <p style="font-size: 22px;">我們將探討三個關鍵主題：</p>
+            <div style="margin: 30px 0;">
+                <p style="font-size: 24px; color: #6d4c41; margin: 15px 0;">Coco Chanel與服飾珠寶的革命</p>
+                <p style="font-size: 24px; color: #6d4c41; margin: 15px 0;">Elsa Schiaparelli的超現實主義珠寶設計</p>
+                <p style="font-size: 24px; color: #6d4c41; margin: 15px 0;">二戰後高級時裝珠寶的黃金時期</p>
+            </div>
+            <p>通過這些設計師的作品，我們將了解高級時裝珠寶如何演變並影響了整個時尚產業</p>
+        </div>
+    </div>
+
+    <!-- 投影片 7: Coco Chanel的設計哲學 -->
+    <div class="slide" id="slide-7">
+        <div class="slide-title">Coco Chanel與服飾珠寶的革命</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>Chanel的設計哲學</h3>
+                    <ul>
+                        <li>實用主義美學：舒適與功能性的強調</li>
+                        <li>混搭理念：真假珠寶的大膽組合</li>
+                        <li>標誌性元素：長鏈條、多層次珍珠、交叉CC標誌</li>
+                        <li>解放精神：打破傳統珠寶規則，賦予女性新的穿戴自由</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="highlight-box">
+                        <h3>經典作品</h3>
+                        <p>1920年代的長珍珠項鍊與簡約手鐲</p>
+                        <p>1930年代的星形與獅子主題胸針</p>
+                        <p>1950年代復出後的金色鏈條與彩色寶石組合</p>
+                    </div>
+                    <div class="highlight-box">
+                        <p>「我不在乎你們是否喜歡我的服裝，重要的是看到它們，你們就無法忘記。」 - Coco Chanel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 8: Chanel的革命性影響 -->
+    <div class="slide" id="slide-8">
+        <div class="slide-title">Chanel的革命性影響</div>
+        <div class="slide-content">
+            <h3>Chanel如何改變了高級時裝珠寶</h3>
+            <div class="two-column">
+                <div class="column">
+                    <div class="highlight-box">
+                        <h4>革命前</h4>
+                        <ul>
+                            <li>珠寶主要用於展示財富與地位</li>
+                            <li>真假珠寶嚴格區分</li>
+                            <li>設計受限於傳統審美</li>
+                            <li>珠寶與服裝設計分離</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="highlight-box">
+                        <h4>Chanel革命後</h4>
+                        <ul>
+                            <li>珠寶成為個人風格表達的工具</li>
+                            <li>真假珠寶混搭成為時尚</li>
+                            <li>設計強調創新與實用性</li>
+                            <li>珠寶成為服裝設計的延伸</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="discussion-question">
+                討論：Chanel的珠寶設計理念如何反映了20世紀初女性角色的變化？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 9: Elsa Schiaparelli的超現實主義 -->
+    <div class="slide" id="slide-9">
+        <div class="slide-title">Elsa Schiaparelli的超現實主義珠寶設計</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>Schiaparelli的創新精神</h3>
+                    <ul>
+                        <li>藝術合作：與達利、考克托等藝術家的跨界合作</li>
+                        <li>幽默元素：將日常物品轉化為珠寶，挑戰傳統</li>
+                        <li>色彩革命：shocking pink的創造與應用</li>
+                        <li>敘事性設計：每件珠寶都講述一個故事或表達一種理念</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>代表作品解析</h3>
+                    <div class="highlight-box">
+                        <p>電話形狀胸針：與達利合作，將日常物品轉化為珠寶藝術</p>
+                        <p>昆蟲與自然元素系列：將蟋蟀、蜜蜂等元素融入珠寶設計</p>
+                        <p>馬戲團與天文系列：將奇幻元素與宇宙想像轉化為佩戴藝術</p>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <p>「設計不僅是為了美麗，更是為了表達思想。」 - Elsa Schiaparelli</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 10: Schiaparelli與Chanel的對比 -->
+    <div class="slide" id="slide-10">
+        <div class="slide-title">Schiaparelli與Chanel的設計對比</div>
+        <div class="slide-content">
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: #d7ccc8;">
+                    <th style="padding: 10px; border: 1px solid #a1887f; text-align: center;">設計面向</th>
+                    <th style="padding: 10px; border: 1px solid #a1887f; text-align: center;">Coco Chanel</th>
+                    <th style="padding: 10px; border: 1px solid #a1887f; text-align: center;">Elsa Schiaparelli</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8; font-weight: bold;">設計理念</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">實用主義與優雅簡約</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">超現實主義與藝術表達</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8; font-weight: bold;">色彩運用</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">黑、白、金的經典組合</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">shocking pink與大膽對比色</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8; font-weight: bold;">靈感來源</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">功能性與日常優雅</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">藝術運動與超現實想像</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8; font-weight: bold;">標誌性作品</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">長珍珠項鍊、鏈條手鐲</td>
+                    <td style="padding: 10px; border: 1px solid #d7ccc8;">電話胸針、昆蟲主題珠寶</td>
+                </tr>
+            </table>
+            <div class="discussion-question">
+                討論：這兩位設計師雖然風格迥異，但如何共同推動了高級時裝珠寶的發展？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 11: 二戰後高級時裝珠寶的黃金時期 -->
+    <div class="slide" id="slide-11">
+        <div class="slide-title">二戰後高級時裝珠寶的黃金時期</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>戰後復興</h3>
+                    <ul>
+                        <li>新風貌(New Look)：Dior的女性化設計與配套珠寶</li>
+                        <li>美國市場崛起：Trifari、Coro等品牌的商業成功</li>
+                        <li>好萊塢影響：電影明星對時裝珠寶流行的推動</li>
+                        <li>製造技術進步：新材料與大規模生產的可能性</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>1950-1960年代的主要風格</h3>
+                    <div class="highlight-box">
+                        <p>Dior的浪漫華麗風格與花卉主題</p>
+                        <p>Givenchy的優雅簡約設計</p>
+                        <p>Balenciaga的建築感珠寶</p>
+                        <p>Pucci的幾何圖案與鮮豔色彩</p>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <p>「二戰後的高級時裝珠寶不僅是奢侈品，更成為大眾文化與時尚產業的重要組成部分。」</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 12: 戰後設計師的影響 -->
+    <div class="slide" id="slide-12">
+        <div class="slide-title">戰後重要設計師的影響</div>
+        <div class="slide-content">
+            <h3>Christian Dior的新風貌革命</h3>
+            <div class="highlight-box">
+                <p>1947年推出的「New Look」不僅改變了服裝輪廓，也帶動了配套珠寶的設計風格</p>
+                <p>強調女性曲線與華麗裝飾，珠寶設計呼應這一理念</p>
+                <p>花卉主題、蝴蝶結元素成為Dior珠寶的標誌性設計</p>
+            </div>
+            
+            <h3>其他重要設計師</h3>
+            <div class="two-column">
+                <div class="column">
+                    <ul>
+                        <li>Hubert de Givenchy：優雅簡約的珠寶設計</li>
+                        <li>Cristóbal Balenciaga：建築感與結構主義珠寶</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li>Emilio Pucci：鮮豔色彩與幾何圖案</li>
+                        <li>Pierre Cardin：太空時代風格的前衛設計</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="discussion-question">
+                討論：戰後設計師如何將各自的服裝設計理念延伸到珠寶設計中？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 13: 課堂活動 -->
+    <div class="slide" id="slide-13">
+        <div class="slide-title">課堂活動與討論</div>
+        <div class="slide-content">
+            <h3>分組活動：辨識不同設計師的標誌性珠寶風格</h3>
+            <div class="highlight-box">
+                <p>每組將收到不同設計師的珠寶圖片，需要辨識設計師並分析其風格特點</p>
+                <p>討論這些設計如何反映了設計師的整體美學理念</p>
+                <p>分享您最欣賞的設計師風格及原因</p>
+            </div>
+            
+            <h3>案例研究</h3>
+            <div class="highlight-box">
+                <p>分析一件經典高級時裝珠寶的設計、材質與歷史背景</p>
+                <p>探討其在當時的創新點與對後世的影響</p>
+            </div>
+            
+            <h3>反思討論</h3>
+            <div class="discussion-question">
+                高級時裝珠寶如何反映其時代的社會文化變遷？請舉例說明。
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 14: 延伸閱讀與資源 -->
+    <div class="slide" id="slide-14">
+        <div class="slide-title">延伸閱讀與資源</div>
+        <div class="slide-content">
+            <h3>推薦書籍</h3>
+            <ul>
+                <li>Florence Muller的其他著作：《Jewelry by Chanel》、《Dior: The New Look Revolution》</li>
+                <li>《Shocking Life》- Elsa Schiaparelli自傳</li>
+                <li>《The Glass of Fashion》- Cecil Beaton</li>
+            </ul>
+            
+            <h3>線上資源</h3>
+            <ul>
+                <li>巴黎時裝博物館(Palais Galliera)的線上珠寶展覽</li>
+                <li>紐約大都會藝術博物館的時裝與珠寶收藏</li>
+                <li>V&A博物館的珠寶收藏數位檔案</li>
+            </ul>
+            
+            <h3>紀錄片推薦</h3>
+            <ul>
+                <li>《Chanel, Chanel》- 關於Coco Chanel的紀錄片</li>
+                <li>《Dior and I》- 探索Dior時裝屋的紀錄片</li>
+                <li>《The Eye Has to Travel》- 關於時尚編輯Diana Vreeland的紀錄片</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 投影片 15: 第一天總結 -->
+    <div class="slide" id="slide-15">
+        <div class="slide-title">第一天課程總結</div>
+        <div class="slide-content">
+            <h3>今日重點回顧</h3>
+            <div class="highlight-box">
+                <ol>
+                    <li>高級時裝珠寶的定義、特點與與傳統珠寶的區別</li>
+                    <li>19世紀末至20世紀初高級時裝珠寶的歷史背景與發展</li>
+                    <li>Coco Chanel的實用主義美學與革命性影響</li>
+                    <li>Elsa Schiaparelli的超現實主義珠寶設計</li>
+                    <li>二戰後高級時裝珠寶的黃金時期與主要設計師</li>
+                </ol>
+            </div>
+            
+            <h3>明日預告：材質與工藝</h3>
+            <div class="highlight-box">
+                <p>上午：高級時裝珠寶的常用材質</p>
+                <p>下午：製作工藝與技術</p>
+                <p>請預習相關材料，並思考不同材質如何影響珠寶的設計表達</p>
+            </div>
+            
+            <div class="discussion-question">
+                反思：今天的學習如何改變了您對高級時裝珠寶的認識？
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 投影片導航功能
+        let currentSlide = 1;
+        const totalSlides = 15;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(slideNumber) {
+            // 隱藏所有投影片
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // 顯示當前投影片
+            document.getElementById('slide-' + slideNumber).classList.add('active');
+            document.getElementById('current-slide').textContent = slideNumber;
+        }
+        
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+        
+        document.getElementById('next-btn').addEventListener('click', function() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+        
+        // 鍵盤導航
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

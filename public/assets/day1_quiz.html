@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一天測驗：高級時裝珠寶的歷史與演變</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f4ef;
+        }
+        
+        h1 {
+            color: #6d4c41;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #d7ccc8;
+            padding-bottom: 10px;
+        }
+        
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d7ccc8;
+        }
+        
+        .question h3 {
+            color: #5d4037;
+            margin-bottom: 15px;
+        }
+        
+        .options {
+            margin-left: 20px;
+        }
+        
+        .option {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .option input {
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .option label {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background-color: #8d6e63;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #6d4c41;
+        }
+        
+        .result {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .feedback {
+            margin-top: 20px;
+        }
+        
+        .correct {
+            color: #2e7d32;
+        }
+        
+        .incorrect {
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <h1>第一天測驗：高級時裝珠寶的歷史與演變</h1>
+    
+    <div class="quiz-container">
+        <form id="quiz-form">
+            <div class="question" id="q1">
+                <h3>1. 高級時裝珠寶(Costume Jewelry for Haute Couture)的主要特點是什麼？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1a" value="A">
+                        <label for="q1a">A. 使用真正的寶石與貴金屬，強調材質的內在價值</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1b" value="B">
+                        <label for="q1b">B. 專為高級訂製服裝設計，注重設計感與藝術性，使用非貴重材料</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1c" value="C">
+                        <label for="q1c">C. 只用於時裝秀展示，不適合日常佩戴的誇張設計</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1d" value="D">
+                        <label for="q1d">D. 大量生產的平價飾品，主要面向大眾市場</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q2">
+                <h3>2. 下列哪位設計師被認為是高級時裝珠寶革命的先驅，首次將真假珠寶混搭並賦予女性新的穿戴自由？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2a" value="A">
+                        <label for="q2a">A. Christian Dior</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2b" value="B">
+                        <label for="q2b">B. Elsa Schiaparelli</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2c" value="C">
+                        <label for="q2c">C. Coco Chanel</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2d" value="D">
+                        <label for="q2d">D. Paul Poiret</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q3">
+                <h3>3. 19世紀末至20世紀初高級時裝珠寶發展的社會文化背景包括哪些因素？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3a" value="A">
+                        <label for="q3a">A. 工業革命、中產階級崛起、新藝術運動與裝飾藝術的影響</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3b" value="B">
+                        <label for="q3b">B. 數位技術發展、全球化貿易、環保意識提升</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3c" value="C">
+                        <label for="q3c">C. 社交媒體興起、快時尚流行、消費主義盛行</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3d" value="D">
+                        <label for="q3d">D. 經濟大蕭條、戰爭限制、材料短缺</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q4">
+                <h3>4. Elsa Schiaparelli的珠寶設計有何特點？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4a" value="A">
+                        <label for="q4a">A. 簡約優雅、黑白配色、實用主義美學</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4b" value="B">
+                        <label for="q4b">B. 超現實主義、與藝術家合作、幽默元素、shocking pink</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4c" value="C">
+                        <label for="q4c">C. 浪漫華麗、花卉主題、柔和色調、女性曲線</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4d" value="D">
+                        <label for="q4d">D. 建築感、幾何形狀、結構主義、極簡風格</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q5">
+                <h3>5. 高級時裝珠寶與傳統高級珠寶在哪些方面有明顯區別？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5a" value="A">
+                        <label for="q5a">A. 高級時裝珠寶只用於展示，不適合實際佩戴</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5b" value="B">
+                        <label for="q5b">B. 高級時裝珠寶沒有收藏價值，而傳統高級珠寶有</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5c" value="C">
+                        <label for="q5c">C. 高級時裝珠寶在材質、設計理念、製作方式和更新頻率上與傳統高級珠寶不同</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5d" value="D">
+                        <label for="q5d">D. 高級時裝珠寶只由特定設計師製作，而傳統高級珠寶可由任何珠寶商製作</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q6">
+                <h3>6. 二戰後高級時裝珠寶的黃金時期有哪些特點？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6a" value="A">
+                        <label for="q6a">A. Dior的新風貌(New Look)、美國市場崛起、好萊塢影響、製造技術進步</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6b" value="B">
+                        <label for="q6b">B. 極簡主義盛行、環保意識抬頭、數位技術應用</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6c" value="C">
+                        <label for="q6c">C. 材料短缺、設計保守、市場萎縮</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6d" value="D">
+                        <label for="q6d">D. 東方風格流行、手工藝復興、民族元素融入</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q7">
+                <h3>7. Chanel的珠寶設計革命如何改變了高級時裝珠寶？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7a" value="A">
+                        <label for="q7a">A. 將珠寶變成個人風格表達的工具，打破真假珠寶界限，強調創新與實用性</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7b" value="B">
+                        <label for="q7b">B. 提高了珠寶的價格，使其只有上流社會才能負擔</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7c" value="C">
+                        <label for="q7c">C. 限制了珠寶的創意表達，強調傳統與保守</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7d" value="D">
+                        <label for="q7d">D. 將珠寶與服裝完全分離，使其成為獨立的藝術形式</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q8">
+                <h3>8. 下列哪項不是Schiaparelli與Chanel設計風格的主要區別？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8a" value="A">
+                        <label for="q8a">A. Schiaparelli偏好超現實主義，Chanel強調實用主義</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8b" value="B">
+                        <label for="q8b">B. Schiaparelli使用shocking pink等鮮豔色彩，Chanel偏好黑白金的經典組合</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8c" value="C">
+                        <label for="q8c">C. Schiaparelli的靈感來自藝術運動，Chanel的靈感來自功能性與日常優雅</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8d" value="D">
+                        <label for="q8d">D. Schiaparelli只設計昂貴珠寶，Chanel只設計平價珠寶</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q9">
+                <h3>9. 高級時裝珠寶如何反映了20世紀初女性角色的變化？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9a" value="A">
+                        <label for="q9a">A. 強調女性應該回歸傳統角色，珠寶設計更加保守</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9b" value="B">
+                        <label for="q9b">B. 反映女性追求解放與自主，設計更加實用、多元且打破傳統規則</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9c" value="C">
+                        <label for="q9c">C. 完全忽視女性角色變化，只關注美學表達</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9d" value="D">
+                        <label for="q9d">D. 強調女性應該通過昂貴珠寶展示社會地位</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q10">
+                <h3>10. 1950-1960年代的高級時裝珠寶主要風格特點是什麼？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10a" value="A">
+                        <label for="q10a">A. 極簡主義、工業風格、冷色調</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10b" value="B">
+                        <label for="q10b">B. 數位風格、科技元素、未來主義</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10c" value="C">
+                        <label for="q10c">C. Dior的浪漫華麗風格、Givenchy的優雅簡約、Balenciaga的建築感設計</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10d" value="D">
+                        <label for="q10d">D. 朋克風格、反叛元素、街頭文化</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" class="submit-btn" onclick="calculateScore()">提交測驗</button>
+        </form>
+        
+        <div class="result" id="result">
+            <div class="score" id="score"></div>
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </div>
+    
+    <script>
+        // 正確答案
+        const correctAnswers = {
+            q1: "B",
+            q2: "C",
+            q3: "A",
+            q4: "B",
+            q5: "C",
+            q6: "A",
+            q7: "A",
+            q8: "D",
+            q9: "B",
+            q10: "C"
+        };
+        
+        function calculateScore() {
+            let score = 100;
+            let feedback = "";
+            let answeredQuestions = 0;
+            
+            // 檢查每個問題
+            for (let i = 1; i <= 10; i++) {
+                const questionId = "q" + i;
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                
+                if (selectedOption) {
+                    answeredQuestions++;
+                    const userAnswer = selectedOption.value;
+                    
+                    if (userAnswer !== correctAnswers[questionId]) {
+                        // 答錯扣10分
+                        score -= 10;
+                        feedback += `<p class="incorrect">問題 ${i}: 不正確。正確答案是 ${correctAnswers[questionId]}。</p>`;
+                    } else {
+                        feedback += `<p class="correct">問題 ${i}: 正確!</p>`;
+                    }
+                } else {
+                    // 未回答扣5分
+                    score -= 5;
+                    feedback += `<p class="incorrect">問題 ${i}: 未回答。正確答案是 ${correctAnswers[questionId]}。</p>`;
+                }
+            }
+            
+            // 顯示結果
+            document.getElementById("score").textContent = `得分: ${score}/100`;
+            document.getElementById("feedback").innerHTML = feedback;
+            document.getElementById("result").style.display = "block";
+            
+            // 滾動到結果區域
+            document.getElementById("result").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>

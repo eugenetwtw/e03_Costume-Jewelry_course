@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三天：設計美學與品牌特色</title>
+    <style>
+        /* 投影片基本樣式 */
+        .slide {
+            display: none;
+            padding: 30px;
+            text-align: center;
+            background-color: #f3e5f5;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 900px;
+        }
+        
+        .slide-title {
+            font-size: 28px;
+            color: #6a1b9a;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ce93d8;
+            padding-bottom: 10px;
+        }
+        
+        .slide-content {
+            font-size: 20px;
+            color: #4a148c;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .slide-image {
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+        
+        .slide-notes {
+            font-size: 16px;
+            color: #7b7b7b;
+            font-style: italic;
+            text-align: left;
+            border-left: 3px solid #ce93d8;
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+        
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .column {
+            flex: 0 0 48%;
+        }
+        
+        .highlight-box {
+            background-color: #e1bee7;
+            border-left: 4px solid #ba68c8;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .discussion-question {
+            background-color: #d1c4e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        /* 導航按鈕 */
+        .nav-buttons {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .nav-btn {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .nav-btn:hover {
+            background-color: #6a1b9a;
+        }
+        
+        /* 當前投影片指示器 */
+        .slide-indicator {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #8e24aa;
+        }
+        
+        /* 顯示當前投影片 */
+        .slide.active {
+            display: block;
+        }
+        
+        /* 列表樣式 */
+        ul, ol {
+            text-align: left;
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-indicator">投影片 <span id="current-slide">1</span> / <span id="total-slides">15</span></div>
+    
+    <div class="nav-buttons">
+        <button class="nav-btn" id="prev-btn">上一頁</button>
+        <button class="nav-btn" id="next-btn">下一頁</button>
+    </div>
+
+    <!-- 投影片 1: 封面 -->
+    <div class="slide active" id="slide-1">
+        <div class="slide-title">第三天：設計美學與品牌特色</div>
+        <div class="slide-content" style="text-align: center;">
+            <p style="font-size: 24px;">《Costume Jewelry for Haute Couture》課程</p>
+            <p>基於Florence Muller著作，Patrick Sigal編輯</p>
+            <p style="margin-top: 40px;">上午：高級時裝珠寶的設計原則</p>
+            <p>下午：著名時裝屋的珠寶風格</p>
+        </div>
+    </div>
+
+    <!-- 投影片 2: 比例與平衡 -->
+    <div class="slide" id="slide-2">
+        <div class="slide-title">比例與平衡</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>視覺平衡理論</h3>
+                    <ul>
+                        <li>對稱與非對稱平衡：傳統與現代設計的不同偏好</li>
+                        <li>重量分布：視覺重量在珠寶設計中的應用</li>
+                        <li>黃金比例：經典比例在珠寶設計中的運用</li>
+                        <li>尺度考量：不同身形與場合的比例調整</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>結構設計</h3>
+                    <ul>
+                        <li>框架與支撐：確保美觀與實用的結構設計</li>
+                        <li>連接點設計：既美觀又堅固的技術挑戰</li>
+                        <li>可穿戴性：舒適度與實用性的平衡</li>
+                        <li>動態設計：考慮珠寶在人體運動中的表現</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>案例分析</h3>
+                <p>Chanel大型胸針的平衡設計：雖體積大但通過精確的重量分布確保穩定佩戴</p>
+                <p>Schiaparelli誇張造型的結構解析：如何在視覺衝擊與實用性間取得平衡</p>
+                <p>現代設計師的創新平衡處理：利用新材料與技術解決傳統設計的限制</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 3: 色彩理論 -->
+    <div class="slide" id="slide-3">
+        <div class="slide-title">色彩理論在珠寶設計中的應用</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>基礎色彩理論</h3>
+                    <ul>
+                        <li>色彩心理學：不同色彩的情感與文化聯想</li>
+                        <li>色彩和諧：互補色、類似色、三元色的應用</li>
+                        <li>色彩對比：明度、彩度、色相對比的戲劇效果</li>
+                        <li>季節色彩：時尚季節與色彩趨勢的關係</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>材質與色彩互動</h3>
+                    <ul>
+                        <li>金屬色調：黃金、白銀、玫瑰金的搭配藝術</li>
+                        <li>透明與不透明：光線穿透對色彩的影響</li>
+                        <li>表面處理：拋光、磨砂、氧化對色彩的改變</li>
+                        <li>光線考量：不同光源下的色彩表現</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>品牌色彩策略</h3>
+                <p>Chanel：黑、白、金的永恆組合，傳達優雅與經典</p>
+                <p>Schiaparelli：shocking pink的標誌性應用，大膽與前衛的表達</p>
+                <p>Dior：柔和粉色與金色的組合，展現浪漫與女性氣質</p>
+            </div>
+            <div class="discussion-question">
+                討論：色彩如何影響珠寶的情感表達與品牌識別？請舉例說明。
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 4: 色彩組合 -->
+    <div class="slide" id="slide-4">
+        <div class="slide-title">高級時裝珠寶的色彩組合</div>
+        <div class="slide-content">
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: #d1c4e9;">
+                    <th style="padding: 10px; border: 1px solid #9575cd; text-align: center;">色彩組合</th>
+                    <th style="padding: 10px; border: 1px solid #9575cd; text-align: center;">視覺效果</th>
+                    <th style="padding: 10px; border: 1px solid #9575cd; text-align: center;">情感聯想</th>
+                    <th style="padding: 10px; border: 1px solid #9575cd; text-align: center;">代表品牌</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ce93d8; font-weight: bold;">黑白金</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">強烈對比，清晰邊界</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">優雅，永恆，經典</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">Chanel</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ce93d8; font-weight: bold;">粉色與金色</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">柔和光澤，溫暖</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">浪漫，女性，奢華</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">Dior</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ce93d8; font-weight: bold;">鮮豔對比色</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">視覺衝擊，活力</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">前衛，大膽，創新</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">Schiaparelli</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ce93d8; font-weight: bold;">單色漸變</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">和諧，流暢，統一</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">現代，簡約，精緻</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">Givenchy</td>
+                </tr>
+            </table>
+            <div class="highlight-box">
+                <p>「色彩不僅是視覺元素，更是品牌語言的重要組成部分。高級時裝珠寶通過精心選擇的色彩組合，傳達品牌獨特的美學理念與情感訴求。」</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 5: 時尚元素與珠寶設計 -->
+    <div class="slide" id="slide-5">
+        <div class="slide-title">時尚元素與珠寶設計的結合</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>服裝與珠寶的對話</h3>
+                    <ul>
+                        <li>領口與項鍊：不同領型的最佳珠寶搭配</li>
+                        <li>袖型與手鐲：從長袖到無袖的珠寶調整</li>
+                        <li>面料質感：如何選擇與服裝材質相呼應的珠寶</li>
+                        <li>整體風格：從極簡主義到華麗風格的一致性</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>時尚趨勢轉化</h3>
+                    <ul>
+                        <li>伸展台到街頭：高級時裝珠寶的日常轉化</li>
+                        <li>季節性設計：春夏與秋冬系列的設計差異</li>
+                        <li>標誌性元素：如何在珠寶中融入品牌DNA</li>
+                        <li>跨界合作：藝術家與設計師合作的創新案例</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>案例研究</h3>
+                <p>Dior 2023春夏系列：輕盈面料與透明元素珠寶的和諧搭配</p>
+                <p>Chanel經典小黑裙：如何通過珠寶選擇改變同一件服裝的風格表達</p>
+                <p>Louis Vuitton與藝術家合作系列：將藝術元素轉化為可穿戴的珠寶設計</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 6: 上午總結 -->
+    <div class="slide" id="slide-6">
+        <div class="slide-title">上午課程總結</div>
+        <div class="slide-content">
+            <h3>高級時裝珠寶的設計原則</h3>
+            <div class="highlight-box">
+                <ol>
+                    <li>比例與平衡：視覺平衡理論與結構設計的應用</li>
+                    <li>色彩理論：基礎色彩理論與材質色彩互動的考量</li>
+                    <li>時尚元素結合：服裝與珠寶的對話，時尚趨勢的轉化</li>
+                    <li>品牌識別：通過設計元素建立獨特的品牌語言</li>
+                </ol>
+            </div>
+            <div class="discussion-question">
+                午休前思考：設計原則如何幫助我們理解不同品牌的珠寶風格差異？請準備一個您最欣賞的品牌案例，下午課程中分享。
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 7: 下午課程開場 -->
+    <div class="slide" id="slide-7">
+        <div class="slide-title">下午課程：著名時裝屋的珠寶風格</div>
+        <div class="slide-content" style="text-align: center;">
+            <p style="font-size: 22px;">我們將探討四個著名時裝屋的珠寶設計風格：</p>
+            <div style="margin: 30px 0;">
+                <p style="font-size: 24px; color: #6a1b9a; margin: 15px 0;">Chanel的經典鏈條與山茶花元素</p>
+                <p style="font-size: 24px; color: #6a1b9a; margin: 15px 0;">Dior的華麗浪漫風格</p>
+                <p style="font-size: 24px; color: #6a1b9a; margin: 15px 0;">Givenchy的優雅簡約設計</p>
+                <p style="font-size: 24px; color: #6a1b9a; margin: 15px 0;">Balenciaga的前衛結構主義</p>
+            </div>
+            <p>通過這些品牌的分析，我們將了解如何辨識不同時裝屋的設計語言與美學理念</p>
+        </div>
+    </div>
+
+    <!-- 投影片 8: Chanel的珠寶風格 -->
+    <div class="slide" id="slide-8">
+        <div class="slide-title">Chanel的經典鏈條與山茶花元素</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>品牌歷史與美學</h3>
+                    <ul>
+                        <li>Coco Chanel的個人風格：從個人穿著到設計理念</li>
+                        <li>品牌標誌性元素：雙C標誌、山茶花、獅子、星星、麥穗</li>
+                        <li>設計哲學：優雅簡約與功能性的平衡</li>
+                        <li>演變歷程：從Coco時代到Karl Lagerfeld再到現在</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>經典系列解析</h3>
+                    <ul>
+                        <li>鏈條系列：金屬鏈條與皮革的交織設計</li>
+                        <li>山茶花系列：從立體到平面的多種表現形式</li>
+                        <li>星星與彗星系列：天文元素的奢華詮釋</li>
+                        <li>獅子系列：Coco的星座符號與個人圖騰</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>設計特點分析</h3>
+                <p>材質選擇：金屬、珍珠、皮革的經典組合，強調質感對比</p>
+                <p>工藝特色：精緻的鏈條製作與鑲嵌技術，注重細節完成度</p>
+                <p>色彩偏好：黑、白、金的永恆組合，簡約而不失奢華</p>
+                <p>可識別性：即使無標誌也能辨認的設計語言，強烈的品牌特色</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 9: Dior的珠寶風格 -->
+    <div class="slide" id="slide-9">
+        <div class="slide-title">Dior的華麗浪漫風格</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>品牌歷史與美學</h3>
+                    <ul>
+                        <li>Christian Dior的新風貌革命：從服裝到珠寶的影響</li>
+                        <li>品牌標誌性元素：玫瑰、蝴蝶結、幸運星、蜜蜂</li>
+                        <li>設計哲學：浪漫女性氣質與精緻工藝</li>
+                        <li>演變歷程：從創始人到各代設計師的風格變化</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>經典系列解析</h3>
+                    <ul>
+                        <li>Rose Dior系列：玫瑰花的多種藝術表現</li>
+                        <li>Dior Tribale系列：雙珍珠耳環的創新設計</li>
+                        <li>Mise en Dior系列：球形元素的簡約表達</li>
+                        <li>Dior Joaillerie系列：高級時裝珠寶的頂級表現</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>設計特點分析</h3>
+                <p>材質選擇：珍珠、水晶、寶石的奢華組合，強調光澤與質感</p>
+                <p>工藝特色：精細的金屬處理與寶石鑲嵌，追求完美細節</p>
+                <p>色彩偏好：柔和粉色、金色與白色的優雅組合，浪漫氛圍</p>
+                <p>結構特點：立體感強、細節豐富的設計風格，注重層次感</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 10: Chanel與Dior的對比 -->
+    <div class="slide" id="slide-10">
+        <div class="slide-title">Chanel與Dior的設計對比</div>
+        <div class="slide-content">
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: #d1c4e9;">
+                    <th style="padding: 10px; border: 1px solid #9575cd; text-align: center;">設計面向</th>
+                    <th style="padding: 10px; border: 1px solid #9575cd; text-align: center;">Chanel</th>
+                    <th style="padding: 10px; border: 1px solid #9575cd; text-align: center;">Dior</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ce93d8; font-weight: bold;">設計理念</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">實用主義與現代簡約</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">浪漫主義與華麗裝飾</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ce93d8; font-weight: bold;">標誌性元素</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">鏈條、雙C標誌、山茶花</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">玫瑰、蝴蝶結、CD標誌</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ce93d8; font-weight: bold;">色彩偏好</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">黑、白、金的經典組合</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">粉色、金色、柔和色調</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ce93d8; font-weight: bold;">結構特點</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">幾何感強、線條清晰</td>
+                    <td style="padding: 10px; border: 1px solid #ce93d8;">曲線豐富、立體感強</td>
+                </tr>
+            </table>
+            <div class="discussion-question">
+                討論：這兩個品牌如何通過珠寶設計反映其服裝設計的核心理念？您認為哪個品牌的設計語言更加一致？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 11: Givenchy的珠寶風格 -->
+    <div class="slide" id="slide-11">
+        <div class="slide-title">Givenchy的優雅簡約設計</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>品牌歷史與美學</h3>
+                    <ul>
+                        <li>Hubert de Givenchy的貴族優雅：從奧黛麗·赫本到現代</li>
+                        <li>品牌標誌性元素：G標誌、鎖扣、幾何形狀</li>
+                        <li>設計哲學：簡約中的精緻與力量</li>
+                        <li>演變歷程：從古典優雅到現代都市風格</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>經典系列解析</h3>
+                    <ul>
+                        <li>Givenchy鎖扣系列：工業元素的時尚轉化</li>
+                        <li>幾何系列：簡潔線條的現代表達</li>
+                        <li>水晶系列：光影變化的奢華感</li>
+                        <li>標誌系列：品牌符號的創意演繹</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>設計特點分析</h3>
+                <p>材質選擇：金屬、水晶、皮革的現代組合，強調質感與結構</p>
+                <p>工藝特色：精準的金屬切割與簡潔的結構，注重線條美感</p>
+                <p>色彩偏好：黑色、銀色的都市感，低調而精緻的色彩運用</p>
+                <p>風格特點：低調奢華、實用優雅的平衡，現代都市女性的選擇</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 12: Balenciaga的珠寶風格 -->
+    <div class="slide" id="slide-12">
+        <div class="slide-title">Balenciaga的前衛結構主義</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>品牌歷史與美學</h3>
+                    <ul>
+                        <li>Cristóbal Balenciaga的建築感：從服裝結構到珠寶設計</li>
+                        <li>品牌標誌性元素：B標誌、幾何形狀、誇張比例</li>
+                        <li>設計哲學：前衛實驗性與精湛工藝的結合</li>
+                        <li>演變歷程：從創始人到Demna Gvasalia的顛覆性轉變</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>經典系列解析</h3>
+                    <ul>
+                        <li>金屬片系列：工業美學的時尚表達</li>
+                        <li>誇張造型系列：挑戰傳統的大膽設計</li>
+                        <li>混合材質系列：意想不到的材質組合</li>
+                        <li>街頭元素系列：將日常物品轉化為珠寶</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>設計特點分析</h3>
+                <p>材質選擇：工業金屬、塑料、非傳統材料，挑戰傳統珠寶界限</p>
+                <p>工藝特色：實驗性技術與傳統工藝的碰撞，創新製作方法</p>
+                <p>色彩偏好：黑色、金屬色、鮮豔對比色，強烈視覺衝擊</p>
+                <p>結構特點：建築感、解構主義、比例遊戲，顛覆傳統審美</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 13: 課堂活動 -->
+    <div class="slide" id="slide-13">
+        <div class="slide-title">課堂活動與討論</div>
+        <div class="slide-content">
+            <h3>品牌辨識練習</h3>
+            <div class="highlight-box">
+                <p>從珠寶設計辨別不同時裝屋的風格：展示不同品牌的珠寶圖片，學員需辨識品牌並說明理由</p>
+                <p>分析不同設計元素如何體現品牌特色：形狀、材質、色彩、結構等</p>
+                <p>討論品牌設計語言的一致性與演變：如何在創新中保持品牌DNA</p>
+            </div>
+            
+            <h3>小組討論</h3>
+            <div class="highlight-box">
+                <p>分析不同品牌如何通過珠寶表達其核心價值：奢華、創新、傳統、前衛等</p>
+                <p>探討品牌標誌性元素的演變與應用：從明顯標誌到隱性設計語言</p>
+                <p>比較不同品牌對同一珠寶類型(如胸針)的不同詮釋</p>
+            </div>
+            
+            <h3>創意練習</h3>
+            <div class="discussion-question">
+                為特定品牌設計一件符合其風格的珠寶草圖：選擇一個品牌，運用其設計語言創作一件新作品
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 14: 延伸閱讀 -->
+    <div class="slide" id="slide-14">
+        <div class="slide-title">延伸閱讀與資源</div>
+        <div class="slide-content">
+            <h3>品牌官方資源</h3>
+            <ul>
+                <li>各大時裝屋的珠寶系列官方網站：最新系列與設計理念</li>
+                <li>品牌歷史檔案館：了解設計演變與歷史背景</li>
+                <li>設計師訪談與品牌紀錄片：深入了解創作過程</li>
+            </ul>
+            
+            <h3>博物館與展覽</h3>
+            <ul>
+                <li>巴黎時裝博物館(Palais Galliera)的品牌特展</li>
+                <li>紐約大都會藝術博物館的時裝與珠寶收藏</li>
+                <li>品牌基金會舉辦的主題展覽：如Fondation Louis Vuitton</li>
+            </ul>
+            
+            <h3>學術研究</h3>
+            <ul>
+                <li>《The Anatomy of Fashion》by Colin McDowell</li>
+                <li>《Fashion Brands: Branding Style from Armani to Zara》by Mark Tungate</li>
+                <li>《The Fashion System》by Roland Barthes</li>
+                <li>時尚品牌研究的學術期刊與論文</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 投影片 15: 第三天總結 -->
+    <div class="slide" id="slide-15">
+        <div class="slide-title">第三天課程總結</div>
+        <div class="slide-content">
+            <h3>今日重點回顧</h3>
+            <div class="highlight-box">
+                <ol>
+                    <li>高級時裝珠寶的設計原則：比例與平衡、色彩理論、時尚元素結合</li>
+                    <li>Chanel的經典鏈條與山茶花元素：優雅簡約與功能性的平衡</li>
+                    <li>Dior的華麗浪漫風格：浪漫女性氣質與精緻工藝</li>
+                    <li>Givenchy的優雅簡約設計：簡約中的精緻與力量</li>
+                    <li>Balenciaga的前衛結構主義：實驗性與傳統工藝的碰撞</li>
+                </ol>
+            </div>
+            
+            <h3>明日預告：收藏與鑑賞</h3>
+            <div class="highlight-box">
+                <p>上午：高級時裝珠寶的收藏價值</p>
+                <p>下午：鑑定與真偽辨別</p>
+                <p>請預習相關材料，並思考收藏高級時裝珠寶的價值與挑戰</p>
+            </div>
+            
+            <div class="discussion-question">
+                反思：今天學習的品牌設計特色如何幫助您更好地欣賞與選擇高級時裝珠寶？
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 投影片導航功能
+        let currentSlide = 1;
+        const totalSlides = 15;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(slideNumber) {
+            // 隱藏所有投影片
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // 顯示當前投影片
+            document.getElementById('slide-' + slideNumber).classList.add('active');
+            document.getElementById('current-slide').textContent = slideNumber;
+        }
+        
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+        
+        document.getElementById('next-btn').addEventListener('click', function() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+        
+        // 鍵盤導航
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第四天：收藏與鑑賞</title>
+    <style>
+        /* 投影片基本樣式 */
+        .slide {
+            display: none;
+            padding: 30px;
+            text-align: center;
+            background-color: #e8f5e9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 900px;
+        }
+        
+        .slide-title {
+            font-size: 28px;
+            color: #2e7d32;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #81c784;
+            padding-bottom: 10px;
+        }
+        
+        .slide-content {
+            font-size: 20px;
+            color: #1b5e20;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .slide-image {
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+        
+        .slide-notes {
+            font-size: 16px;
+            color: #7b7b7b;
+            font-style: italic;
+            text-align: left;
+            border-left: 3px solid #81c784;
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+        
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .column {
+            flex: 0 0 48%;
+        }
+        
+        .highlight-box {
+            background-color: #c8e6c9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .discussion-question {
+            background-color: #a5d6a7;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        /* 導航按鈕 */
+        .nav-buttons {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .nav-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .nav-btn:hover {
+            background-color: #388e3c;
+        }
+        
+        /* 當前投影片指示器 */
+        .slide-indicator {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #4caf50;
+        }
+        
+        /* 顯示當前投影片 */
+        .slide.active {
+            display: block;
+        }
+        
+        /* 列表樣式 */
+        ul, ol {
+            text-align: left;
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-indicator">投影片 <span id="current-slide">1</span> / <span id="total-slides">15</span></div>
+    
+    <div class="nav-buttons">
+        <button class="nav-btn" id="prev-btn">上一頁</button>
+        <button class="nav-btn" id="next-btn">下一頁</button>
+    </div>
+
+    <!-- 投影片 1: 封面 -->
+    <div class="slide active" id="slide-1">
+        <div class="slide-title">第四天：收藏與鑑賞</div>
+        <div class="slide-content" style="text-align: center;">
+            <p style="font-size: 24px;">《Costume Jewelry for Haute Couture》課程</p>
+            <p>基於Florence Muller著作，Patrick Sigal編輯</p>
+            <p style="margin-top: 40px;">上午：高級時裝珠寶的收藏價值</p>
+            <p>下午：鑑定與真偽辨別</p>
+        </div>
+    </div>
+
+    <!-- 投影片 2: 收藏價值概述 -->
+    <div class="slide" id="slide-2">
+        <div class="slide-title">高級時裝珠寶的收藏價值</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>藝術與文化價值</h3>
+                    <ul>
+                        <li>設計創新：反映時代美學與設計潮流</li>
+                        <li>歷史見證：記錄時尚演變與社會變遷</li>
+                        <li>工藝傳承：保存傳統技藝與創新方法</li>
+                        <li>文化象徵：體現特定時期的文化精神</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>市場與投資價值</h3>
+                    <ul>
+                        <li>稀有性：限量生產與絕版設計的價值</li>
+                        <li>品牌影響：知名設計師與品牌的市場認可</li>
+                        <li>保值潛力：經典設計的長期價值穩定性</li>
+                        <li>拍賣表現：二級市場的價格趨勢與增值空間</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>收藏價值案例</h3>
+                <p>Chanel 1930年代的早期作品：從當時的時尚配飾到現在的博物館級藏品</p>
+                <p>Schiaparelli與達利合作系列：藝術與時尚跨界的經典之作</p>
+                <p>限量版紀念系列：品牌週年或特殊事件的紀念珠寶</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 3: 收藏類別 -->
+    <div class="slide" id="slide-3">
+        <div class="slide-title">高級時裝珠寶的收藏類別</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>按時期分類</h3>
+                    <ul>
+                        <li>早期作品(1920-1950)：設計奠基時期的珍稀作品</li>
+                        <li>黃金時代(1950-1970)：戰後繁榮時期的經典設計</li>
+                        <li>現代轉型(1970-2000)：品牌轉型與創新的關鍵作品</li>
+                        <li>當代限量(2000至今)：具收藏潛力的現代設計</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>按設計師/品牌分類</h3>
+                    <ul>
+                        <li>創始人時期：品牌創始設計師的原創作品</li>
+                        <li>標誌性系列：品牌最具代表性的經典系列</li>
+                        <li>特定設計師：知名設計師執掌時期的代表作</li>
+                        <li>跨界合作：與藝術家、其他品牌合作的特別系列</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>特殊收藏類別</h3>
+                <p>伸展台珠寶：專為時裝秀設計的獨特作品，通常不進入商業生產</p>
+                <p>原型與樣品：設計過程中的原型或未量產的樣品</p>
+                <p>名人佩戴：曾被名人佩戴或擁有的珠寶，具有特殊歷史意義</p>
+                <p>技術創新：首次使用新材料或技術的開創性作品</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 4: 收藏市場趨勢 -->
+    <div class="slide" id="slide-4">
+        <div class="slide-title">收藏市場趨勢與價值評估</div>
+        <div class="slide-content">
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: #a5d6a7;">
+                    <th style="padding: 10px; border: 1px solid #4caf50; text-align: center;">收藏類別</th>
+                    <th style="padding: 10px; border: 1px solid #4caf50; text-align: center;">市場趨勢</th>
+                    <th style="padding: 10px; border: 1px solid #4caf50; text-align: center;">價值影響因素</th>
+                    <th style="padding: 10px; border: 1px solid #4caf50; text-align: center;">投資建議</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #81c784; font-weight: bold;">早期經典作品</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">穩定上升，博物館競爭</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">原始性、完整度、來源</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">長期持有，謹慎購入</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #81c784; font-weight: bold;">限量紀念系列</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">初期波動，長期穩定</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">限量數量、包裝完整性</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">發行時購入，保持原始狀態</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #81c784; font-weight: bold;">設計師轉型期</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">專業收藏家關注</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">設計創新性、歷史意義</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">選擇具標誌性的轉型作品</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #81c784; font-weight: bold;">當代設計師作品</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">波動較大，需選擇性</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">設計師聲譽、創新度</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">關注新銳設計師首發系列</td>
+                </tr>
+            </table>
+            <div class="highlight-box">
+                <p>「高級時裝珠寶的收藏價值不僅體現在材質本身，更在於其設計理念、歷史意義與文化象徵。真正的收藏家既是美學鑑賞者，也是時尚歷史的守護者。」</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 5: 建立個人收藏 -->
+    <div class="slide" id="slide-5">
+        <div class="slide-title">建立個人收藏：策略與方法</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>收藏策略</h3>
+                    <ul>
+                        <li>主題收藏：聚焦特定時期、設計師或風格</li>
+                        <li>系列收藏：完整收集某一系列的不同款式</li>
+                        <li>演變收藏：追蹤特定設計元素的歷史演變</li>
+                        <li>對比收藏：不同品牌對同一主題的詮釋比較</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>收藏管道</h3>
+                    <ul>
+                        <li>專業拍賣會：Christie's、Sotheby's等高端拍賣</li>
+                        <li>古董珠寶商：專業二手高級時裝珠寶經銷商</li>
+                        <li>收藏家社群：私人交易與收藏家網絡</li>
+                        <li>品牌古董部門：部分品牌提供的復刻或古董服務</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>收藏建議</h3>
+                <p>建立專業知識：持續學習與研究，培養鑑賞眼光</p>
+                <p>注重來源證明：確保每件藏品有清晰的來源與真實性證明</p>
+                <p>適當保存：投資專業保存設備與保險，確保藏品狀態</p>
+                <p>建立檔案：為每件藏品建立詳細檔案，包括購買信息、歷史背景等</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 6: 上午總結 -->
+    <div class="slide" id="slide-6">
+        <div class="slide-title">上午課程總結</div>
+        <div class="slide-content">
+            <h3>高級時裝珠寶的收藏價值</h3>
+            <div class="highlight-box">
+                <ol>
+                    <li>藝術與文化價值：設計創新、歷史見證、工藝傳承、文化象徵</li>
+                    <li>市場與投資價值：稀有性、品牌影響、保值潛力、拍賣表現</li>
+                    <li>收藏類別：按時期、設計師/品牌、特殊類別的分類方法</li>
+                    <li>市場趨勢與價值評估：不同類別的市場表現與投資建議</li>
+                    <li>建立個人收藏：收藏策略、收藏管道與專業建議</li>
+                </ol>
+            </div>
+            <div class="discussion-question">
+                午休前思考：如果您要開始收藏高級時裝珠寶，您會選擇什麼主題或策略？為什麼？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 7: 下午課程開場 -->
+    <div class="slide" id="slide-7">
+        <div class="slide-title">下午課程：鑑定與真偽辨別</div>
+        <div class="slide-content" style="text-align: center;">
+            <p style="font-size: 22px;">我們將探討四個關鍵鑑定領域：</p>
+            <div style="margin: 30px 0;">
+                <p style="font-size: 24px; color: #2e7d32; margin: 15px 0;">品牌標記與簽名辨識</p>
+                <p style="font-size: 24px; color: #2e7d32; margin: 15px 0;">材質與工藝鑑定</p>
+                <p style="font-size: 24px; color: #2e7d32; margin: 15px 0;">年代與風格判斷</p>
+                <p style="font-size: 24px; color: #2e7d32; margin: 15px 0;">真品與仿品的區別</p>
+            </div>
+            <p>通過這些知識，我們將學習如何專業地評估高級時裝珠寶的真實性與價值</p>
+        </div>
+    </div>
+
+    <!-- 投影片 8: 品牌標記與簽名 -->
+    <div class="slide" id="slide-8">
+        <div class="slide-title">品牌標記與簽名辨識</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>標記位置與方式</h3>
+                    <ul>
+                        <li>常見標記位置：背面、扣環、針座、內側</li>
+                        <li>標記方式：壓印、雕刻、鑄造、金屬牌</li>
+                        <li>隱藏標記：部分高級珠寶使用不明顯的標記</li>
+                        <li>無標記情況：早期作品或特殊設計可能無標記</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>主要品牌標記特點</h3>
+                    <ul>
+                        <li>Chanel：CC標誌、品牌名、生產國、年份編碼</li>
+                        <li>Dior：CD標誌、Christian Dior全名、生產國</li>
+                        <li>Schiaparelli：品牌名、S標誌、特殊符號</li>
+                        <li>YSL：交疊字母標誌、完整品牌名</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>標記演變</h3>
+                <p>Chanel標記演變：從早期簡單的"Chanel"到現代的完整編碼系統</p>
+                <p>Dior標記變化：不同時期設計師對品牌標記的調整</p>
+                <p>標記與年代關係：通過標記形式判斷大致年代</p>
+                <p>特殊標記：限量版、紀念版、合作系列的特殊標記</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 9: 材質與工藝鑑定 -->
+    <div class="slide" id="slide-9">
+        <div class="slide-title">材質與工藝鑑定</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>材質鑑定</h3>
+                    <ul>
+                        <li>金屬鑑定：重量、色澤、氧化程度的判斷</li>
+                        <li>水晶辨別：折射率、切割精度、品牌特點</li>
+                        <li>樹脂識別：年代特徵、老化狀態、質感判斷</li>
+                        <li>珍珠評估：光澤、均勻度、表面質量</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>工藝鑑定</h3>
+                    <ul>
+                        <li>焊接痕跡：不同時期焊接技術的特點</li>
+                        <li>鑲嵌方式：品牌特有的鑲嵌技術與風格</li>
+                        <li>表面處理：拋光、磨砂、氧化等工藝判斷</li>
+                        <li>組裝細節：連接點、活動部件的製作質量</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>品牌工藝特點</h3>
+                <p>Chanel的鏈條工藝：皮革與金屬的交織技術，重量與平衡感</p>
+                <p>Dior的水晶鑲嵌：特有的多層次鑲嵌方式與光影效果</p>
+                <p>Schiaparelli的立體造型：複雜形狀的平衡與結構處理</p>
+                <p>工藝細節與真偽：專業工藝細節常是辨別真偽的關鍵</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 10: 年代與風格判斷 -->
+    <div class="slide" id="slide-10">
+        <div class="slide-title">年代與風格判斷</div>
+        <div class="slide-content">
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: #a5d6a7;">
+                    <th style="padding: 10px; border: 1px solid #4caf50; text-align: center;">年代</th>
+                    <th style="padding: 10px; border: 1px solid #4caf50; text-align: center;">設計特點</th>
+                    <th style="padding: 10px; border: 1px solid #4caf50; text-align: center;">材質傾向</th>
+                    <th style="padding: 10px; border: 1px solid #4caf50; text-align: center;">工藝標誌</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #81c784; font-weight: bold;">1930-1940年代</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">裝飾藝術風格，幾何形狀</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">早期塑料，厚重金屬</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">手工焊接，簡單鑲嵌</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #81c784; font-weight: bold;">1950-1960年代</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">華麗風格，花卉主題</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">彩色樹脂，鍍金金屬</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">精細鑄造，複雜鑲嵌</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #81c784; font-weight: bold;">1970-1980年代</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">大膽誇張，民族風元素</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">混合材質，實驗性材料</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">創新連接，表面處理</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #81c784; font-weight: bold;">1990-2000年代</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">極簡主義，品牌標誌突出</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">輕量金屬，高科技材料</td>
+                    <td style="padding: 10px; border: 1px solid #81c784;">精準機械加工，標準化</td>
+                </tr>
+            </table>
+            <div class="highlight-box">
+                <h3>風格判斷要點</h3>
+                <p>設計師標誌：不同設計師的個人風格特點與偏好元素</p>
+                <p>時代背景：社會文化背景對設計風格的影響</p>
+                <p>技術演變：製作技術的發展與設計可能性的關係</p>
+                <p>參考資料：利用品牌目錄、雜誌廣告等歷史資料輔助判斷</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 11: 真品與仿品區別 -->
+    <div class="slide" id="slide-11">
+        <div class="slide-title">真品與仿品的區別</div>
+        <div class="slide-content">
+            <div class="two-column">
+                <div class="column">
+                    <h3>常見仿品類型</h3>
+                    <ul>
+                        <li>直接仿冒：完全複製品牌設計與標記</li>
+                        <li>靈感仿製：相似設計但使用不同標記</li>
+                        <li>復古再造：聲稱是古董但實為現代製作</li>
+                        <li>混合真假：使用部分真品零件組裝的混合品</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>辨別要點</h3>
+                    <ul>
+                        <li>重量與平衡：真品通常有適當重量與平衡感</li>
+                        <li>細節完成度：邊緣、連接點、背面的處理質量</li>
+                        <li>標記精確度：字體、間距、深度的準確性</li>
+                        <li>老化特性：自然老化與人工做舊的區別</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3>品牌特定辨別點</h3>
+                <p>Chanel：鏈條質感與重量、標記編碼系統的一致性</p>
+                <p>Dior：水晶切割與排列的精確度、標記位置的正確性</p>
+                <p>YSL：金屬質地與拋光效果、標誌比例的準確性</p>
+                <p>專業建議：重要收藏品應尋求專業鑑定與品牌認證</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 12: 專業鑑定工具 -->
+    <div class="slide" id="slide-12">
+        <div class="slide-title">專業鑑定工具與方法</div>
+        <div class="slide-content">
+            <h3>基礎鑑定工具</h3>
+            <div class="highlight-box">
+                <p>放大鏡(10x-30x)：檢查細節、標記、工藝痕跡</p>
+                <p>數位顯微鏡：高倍放大觀察與記錄</p>
+                <p>紫外線燈：檢查修復痕跡與某些材質反應</p>
+                <p>精密電子秤：測量重量與密度</p>
+                <p>參考資料庫：品牌目錄、拍賣記錄、專業文獻</p>
+            </div>
+            
+            <h3>專業鑑定方法</h3>
+            <div class="highlight-box">
+                <p>比對法：與已知真品的直接比較</p>
+                <p>歷史研究：追溯設計源頭與生產背景</p>
+                <p>材質測試：非破壞性材質分析</p>
+                <p>專家諮詢：尋求專業鑑定師或品牌專家意見</p>
+                <p>品牌認證：部分品牌提供官方鑑定服務</p>
+            </div>
+            
+            <div class="discussion-question">
+                討論：在沒有專業工具的情況下，普通收藏者如何提高自己辨別真偽的能力？
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 13: 課堂活動 -->
+    <div class="slide" id="slide-13">
+        <div class="slide-title">課堂活動與討論</div>
+        <div class="slide-content">
+            <h3>真偽辨別練習</h3>
+            <div class="highlight-box">
+                <p>展示真品與仿品對比：分析兩者在細節上的差異</p>
+                <p>小組鑑定挑戰：為每組提供珠寶樣品，進行真偽與年代判斷</p>
+                <p>討論判斷依據：分享判斷過程與關鍵觀察點</p>
+            </div>
+            
+            <h3>收藏案例分析</h3>
+            <div class="highlight-box">
+                <p>成功收藏案例研究：分析專業收藏家的收藏策略與眼光</p>
+                <p>市場價值評估：討論不同類型藏品的市場表現與投資潛力</p>
+                <p>收藏陷阱警示：常見的收藏誤區與風險</p>
+            </div>
+            
+            <h3>實用技能練習</h3>
+            <div class="discussion-question">
+                如何為自己的珠寶藏品建立專業檔案？請設計一個完整的藏品檔案模板。
+            </div>
+        </div>
+    </div>
+
+    <!-- 投影片 14: 延伸閱讀 -->
+    <div class="slide" id="slide-14">
+        <div class="slide-title">延伸閱讀與資源</div>
+        <div class="slide-content">
+            <h3>專業鑑定書籍</h3>
+            <ul>
+                <li>《Collecting Costume Jewelry: Identification and Price Guide》by Julia C. Carroll</li>
+                <li>《Warman's Jewelry: Identification and Price Guide》by Kathy Flood</li>
+                <li>《Answers to Faking It: The Art of Deception in Jewelry》by Carolyn L. Pollack</li>
+            </ul>
+            
+            <h3>線上資源</h3>
+            <ul>
+                <li>Morning Glory Antiques: 專業高級時裝珠寶鑑定資源</li>
+                <li>Costume Jewelry Collectors Int'l: 收藏家社群與鑑定論壇</li>
+                <li>Heritage Auctions Archive: 拍賣記錄與專家評估</li>
+            </ul>
+            
+            <h3>專業鑑定服務</h3>
+            <ul>
+                <li>主要拍賣行的鑑定部門：Christie's, Sotheby's</li>
+                <li>品牌官方鑑定服務：部分品牌提供真偽與年代鑑定</li>
+                <li>專業珠寶鑑定師：國際認證的獨立鑑定專家</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 投影片 15: 第四天總結 -->
+    <div class="slide" id="slide-15">
+        <div class="slide-title">第四天課程總結</div>
+        <div class="slide-content">
+            <h3>今日重點回顧</h3>
+            <div class="highlight-box">
+                <ol>
+                    <li>高級時裝珠寶的收藏價值：藝術文化價值與市場投資價值</li>
+                    <li>收藏類別與策略：按時期、設計師/品牌分類的收藏方法</li>
+                    <li>品牌標記與簽名辨識：不同品牌的標記特點與演變</li>
+                    <li>材質與工藝鑑定：通過材質特性與工藝細節判斷真偽</li>
+                    <li>年代與風格判斷：不同時期的設計特點與材質傾向</li>
+                    <li>真品與仿品的區別：辨別要點與專業鑑定方法</li>
+                </ol>
+            </div>
+            
+            <h3>明日預告：當代趨勢與實踐應用</h3>
+            <div class="highlight-box">
+                <p>上午：當代高級時裝珠寶的創新趨勢</p>
+                <p>下午：珠寶設計與造型搭配</p>
+                <p>請預習相關材料，並思考高級時裝珠寶在當代時尚中的角色與未來發展</p>
+            </div>
+            
+            <div class="discussion-question">
+                反思：今天學習的收藏與鑑定知識如何改變了您對高級時裝珠寶的理解與欣賞方式？
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 投影片導航功能
+        let currentSlide = 1;
+        const totalSlides = 15;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(slideNumber) {
+            // 隱藏所有投影片
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // 顯示當前投影片
+            document.getElementById('slide-' + slideNumber).classList.add('active');
+            document.getElementById('current-slide').textContent = slideNumber;
+        }
+        
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+        
+        document.getElementById('next-btn').addEventListener('click', function() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+        
+        // 鍵盤導航
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

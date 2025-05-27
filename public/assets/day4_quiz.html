@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第四天測驗：收藏與鑑賞</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f3e5f5;
+        }
+        
+        h1 {
+            color: #6a1b9a;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ce93d8;
+            padding-bottom: 10px;
+        }
+        
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ce93d8;
+        }
+        
+        .question h3 {
+            color: #4a148c;
+            margin-bottom: 15px;
+        }
+        
+        .options {
+            margin-left: 20px;
+        }
+        
+        .option {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .option input {
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .option label {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background-color: #8e24aa;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #6a1b9a;
+        }
+        
+        .result {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .feedback {
+            margin-top: 20px;
+        }
+        
+        .correct {
+            color: #2e7d32;
+        }
+        
+        .incorrect {
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <h1>第四天測驗：收藏與鑑賞</h1>
+    
+    <div class="quiz-container">
+        <form id="quiz-form">
+            <div class="question" id="q1">
+                <h3>1. 高級時裝珠寶收藏的價值主要體現在哪些方面？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1a" value="A">
+                        <label for="q1a">A. 僅在材料的內在價值</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1b" value="B">
+                        <label for="q1b">B. 設計價值、歷史意義、工藝水平與品牌價值</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1c" value="C">
+                        <label for="q1c">C. 僅在其年代久遠程度</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1d" value="D">
+                        <label for="q1d">D. 僅在其稀有程度</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q2">
+                <h3>2. 在高級時裝珠寶鑑定中，如何辨別真品與仿製品？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2a" value="A">
+                        <label for="q2a">A. 只看價格，價格高的一定是真品</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2b" value="B">
+                        <label for="q2b">B. 檢查品牌標記、製作工藝、材質特徵、設計細節與歷史一致性</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2c" value="C">
+                        <label for="q2c">C. 只看重量，重的一定是真品</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2d" value="D">
+                        <label for="q2d">D. 只看外觀，外觀精美的一定是真品</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q3">
+                <h3>3. 下列哪項不是評估高級時裝珠寶收藏價值的關鍵因素？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3a" value="A">
+                        <label for="q3a">A. 設計師或品牌的重要性</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3b" value="B">
+                        <label for="q3b">B. 歷史背景與文化意義</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3c" value="C">
+                        <label for="q3c">C. 製作工藝與技術創新</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3d" value="D">
+                        <label for="q3d">D. 購買者的社會地位</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q4">
+                <h3>4. 高級時裝珠寶的保養與維護應注意哪些事項？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4a" value="A">
+                        <label for="q4a">A. 定期清潔、避免化學品接觸、適當存放、定期專業檢查</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4b" value="B">
+                        <label for="q4b">B. 使用強力清潔劑徹底清洗</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4c" value="C">
+                        <label for="q4c">C. 長期暴露在陽光下以保持光澤</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4d" value="D">
+                        <label for="q4d">D. 與其他珠寶混合存放以節省空間</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q5">
+                <h3>5. 建立高級時裝珠寶收藏的策略應包括哪些方面？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5a" value="A">
+                        <label for="q5a">A. 只收集最昂貴的珠寶</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5b" value="B">
+                        <label for="q5b">B. 只收集最新的設計</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5c" value="C">
+                        <label for="q5c">C. 確定收藏主題、研究市場與歷史、建立專業網絡、平衡個人喜好與投資價值</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5d" value="D">
+                        <label for="q5d">D. 隨機購買任何珠寶</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q6">
+                <h3>6. 下列哪項是高級時裝珠寶收藏中的重要文獻資料？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6a" value="A">
+                        <label for="q6a">A. 原始設計圖、品牌目錄、展覽資料、拍賣記錄</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6b" value="B">
+                        <label for="q6b">B. 只有購買收據</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6c" value="C">
+                        <label for="q6c">C. 社交媒體上的評論</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6d" value="D">
+                        <label for="q6d">D. 文獻資料對收藏沒有重要性</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q7">
+                <h3>7. 高級時裝珠寶的年代鑑定主要依據哪些特徵？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7a" value="A">
+                        <label for="q7a">A. 設計風格、製作工藝、材質特點、品牌標記、歷史背景</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7b" value="B">
+                        <label for="q7b">B. 只看外觀</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7c" value="C">
+                        <label for="q7c">C. 只看價格</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7d" value="D">
+                        <label for="q7d">D. 只看賣家描述</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q8">
+                <h3>8. 博物館與私人收藏在高級時裝珠寶保存中的角色有何不同？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8a" value="A">
+                        <label for="q8a">A. 博物館注重歷史價值與公眾教育，私人收藏更注重個人喜好與投資價值</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8b" value="B">
+                        <label for="q8b">B. 兩者沒有區別</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8c" value="C">
+                        <label for="q8c">C. 博物館只收集古代珠寶，私人收藏只收集現代珠寶</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8d" value="D">
+                        <label for="q8d">D. 博物館不關注高級時裝珠寶</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q9">
+                <h3>9. 高級時裝珠寶的市場價值評估應考慮哪些因素？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9a" value="A">
+                        <label for="q9a">A. 設計師/品牌聲譽、稀有度、歷史意義、保存狀態、市場需求</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9b" value="B">
+                        <label for="q9b">B. 只看材料成本</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9c" value="C">
+                        <label for="q9c">C. 只看製作時間</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9d" value="D">
+                        <label for="q9d">D. 只看當前流行趨勢</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q10">
+                <h3>10. 下列哪項是高級時裝珠寶收藏中的倫理考量？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10a" value="A">
+                        <label for="q10a">A. 文化遺產保護、材料來源道德性、真實性與透明度</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10b" value="B">
+                        <label for="q10b">B. 收藏不需要考慮倫理問題</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10c" value="C">
+                        <label for="q10c">C. 只考慮價格是否合理</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10d" value="D">
+                        <label for="q10d">D. 只考慮是否符合個人喜好</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" class="submit-btn" onclick="calculateScore()">提交測驗</button>
+        </form>
+        
+        <div class="result" id="result">
+            <div class="score" id="score"></div>
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </div>
+    
+    <script>
+        // 正確答案
+        const correctAnswers = {
+            q1: "B",
+            q2: "B",
+            q3: "D",
+            q4: "A",
+            q5: "C",
+            q6: "A",
+            q7: "A",
+            q8: "A",
+            q9: "A",
+            q10: "A"
+        };
+        
+        function calculateScore() {
+            let score = 100;
+            let feedback = "";
+            let answeredQuestions = 0;
+            
+            // 檢查每個問題
+            for (let i = 1; i <= 10; i++) {
+                const questionId = "q" + i;
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                
+                if (selectedOption) {
+                    answeredQuestions++;
+                    const userAnswer = selectedOption.value;
+                    
+                    if (userAnswer !== correctAnswers[questionId]) {
+                        // 答錯扣10分
+                        score -= 10;
+                        feedback += `<p class="incorrect">問題 ${i}: 不正確。正確答案是 ${correctAnswers[questionId]}。</p>`;
+                    } else {
+                        feedback += `<p class="correct">問題 ${i}: 正確!</p>`;
+                    }
+                } else {
+                    // 未回答扣5分
+                    score -= 5;
+                    feedback += `<p class="incorrect">問題 ${i}: 未回答。正確答案是 ${correctAnswers[questionId]}。</p>`;
+                }
+            }
+            
+            // 顯示結果
+            document.getElementById("score").textContent = `得分: ${score}/100`;
+            document.getElementById("feedback").innerHTML = feedback;
+            document.getElementById("result").style.display = "block";
+            
+            // 滾動到結果區域
+            document.getElementById("result").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第五天測驗：當代趨勢與實踐應用</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff8e1;
+        }
+        
+        h1 {
+            color: #ff8f00;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ffcc80;
+            padding-bottom: 10px;
+        }
+        
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ffcc80;
+        }
+        
+        .question h3 {
+            color: #e65100;
+            margin-bottom: 15px;
+        }
+        
+        .options {
+            margin-left: 20px;
+        }
+        
+        .option {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .option input {
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .option label {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #f57c00;
+        }
+        
+        .result {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .feedback {
+            margin-top: 20px;
+        }
+        
+        .correct {
+            color: #2e7d32;
+        }
+        
+        .incorrect {
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <h1>第五天測驗：當代趨勢與實踐應用</h1>
+    
+    <div class="quiz-container">
+        <form id="quiz-form">
+            <div class="question" id="q1">
+                <h3>1. 當代高級時裝珠寶設計的主要趨勢包括哪些？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1a" value="A">
+                        <label for="q1a">A. 只追求傳統設計，拒絕創新</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1b" value="B">
+                        <label for="q1b">B. 極簡主義回歸、誇張比例、混搭風格、解構主義、敘事性設計</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1c" value="C">
+                        <label for="q1c">C. 只使用貴重材料，拒絕實驗性材質</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1d" value="D">
+                        <label for="q1d">D. 只關注價格，忽視設計創新</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q2">
+                <h3>2. 下列哪項是當代高級時裝珠寶中的材質與技術創新？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2a" value="A">
+                        <label for="q2a">A. 可持續材料、3D列印技術、智能材料、混合媒材</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2b" value="B">
+                        <label for="q2b">B. 只使用傳統貴金屬與寶石</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2c" value="C">
+                        <label for="q2c">C. 拒絕使用任何新技術</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2d" value="D">
+                        <label for="q2d">D. 只關注材料價值，忽視技術創新</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q3">
+                <h3>3. 可持續發展在當代高級時裝珠寶中的體現包括哪些方面？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3a" value="A">
+                        <label for="q3a">A. 材料來源、生產過程、勞工條件、產品生命週期</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3b" value="B">
+                        <label for="q3b">B. 只關注價格，忽視環境影響</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3c" value="C">
+                        <label for="q3c">C. 只是行銷策略，沒有實質內容</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3d" value="D">
+                        <label for="q3d">D. 高級時裝珠寶與可持續發展無關</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q4">
+                <h3>4. 當代消費者行為對高級時裝珠寶市場的影響表現在哪些方面？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4a" value="A">
+                        <label for="q4a">A. 價值導向消費、個性化需求、數位原生代影響、混合消費模式</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4b" value="B">
+                        <label for="q4b">B. 消費者只關注價格，不關注設計</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4c" value="C">
+                        <label for="q4c">C. 消費者完全拒絕高級時裝珠寶</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="q4d" value="D">
+                        <label for="q4d">D. 消費者行為對市場沒有影響</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q5">
+                <h3>5. 珠寶與服裝搭配的和諧關係主要考慮哪些因素？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5a" value="A">
+                        <label for="q5a">A. 服裝元素與珠寶選擇、色彩協調原則、質感平衡</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5b" value="B">
+                        <label for="q5b">B. 只考慮珠寶價格</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5c" value="C">
+                        <label for="q5c">C. 只考慮服裝品牌</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" id="q5d" value="D">
+                        <label for="q5d">D. 珠寶與服裝搭配不需要考慮和諧關係</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q6">
+                <h3>6. 個人風格與珠寶選擇的關係體現在哪些方面？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6a" value="A">
+                        <label for="q6a">A. 風格類型與珠寶特點、個人特質考量、風格建立策略</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6b" value="B">
+                        <label for="q6b">B. 個人風格與珠寶選擇無關</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6c" value="C">
+                        <label for="q6c">C. 只考慮流行趨勢，忽視個人風格</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="q6d" value="D">
+                        <label for="q6d">D. 只考慮價格，忽視風格匹配</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q7">
+                <h3>7. 不同場合的珠寶搭配原則有哪些差異？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7a" value="A">
+                        <label for="q7a">A. 所有場合都應使用相同的珠寶</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7b" value="B">
+                        <label for="q7b">B. 職場需簡約專業、晚宴需精緻焦點、創意場合可獨特實驗、日常需舒適實用</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7c" value="C">
+                        <label for="q7c">C. 場合不同只影響服裝選擇，不影響珠寶</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="q7d" value="D">
+                        <label for="q7d">D. 只有正式場合才需要佩戴珠寶</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q8">
+                <h3>8. 下列哪些是高級時裝珠寶的實用造型技巧？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8a" value="A">
+                        <label for="q8a">A. 分層與堆疊技巧、創意佩戴方式、混合金屬與材質</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8b" value="B">
+                        <label for="q8b">B. 隨意佩戴，不需技巧</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8c" value="C">
+                        <label for="q8c">C. 只佩戴單一珠寶，避免組合</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="q8d" value="D">
+                        <label for="q8d">D. 只考慮價格，忽視造型效果</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q9">
+                <h3>9. 高級時裝珠寶的未來發展趨勢包括哪些方向？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9a" value="A">
+                        <label for="q9a">A. 數位化與虛擬珠寶、可持續創新、跨界融合、個人化定制</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9b" value="B">
+                        <label for="q9b">B. 回歸傳統，拒絕創新</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9c" value="C">
+                        <label for="q9c">C. 高級時裝珠寶將完全消失</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="q9d" value="D">
+                        <label for="q9d">D. 只關注價格，忽視設計與創新</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question" id="q10">
+                <h3>10. 高級時裝珠寶在當代文化中的意義是什麼？</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10a" value="A">
+                        <label for="q10a">A. 只是裝飾品，沒有文化意義</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10b" value="B">
+                        <label for="q10b">B. 時代精神的體現、設計師理念的表達、工藝傳承的載體、個人身份的象徵</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10c" value="C">
+                        <label for="q10c">C. 只是財富的象徵</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="q10d" value="D">
+                        <label for="q10d">D. 只是時尚產業的附屬品</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" class="submit-btn" onclick="calculateScore()">提交測驗</button>
+        </form>
+        
+        <div class="result" id="result">
+            <div class="score" id="score"></div>
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </div>
+    
+    <script>
+        // 正確答案
+        const correctAnswers = {
+            q1: "B",
+            q2: "A",
+            q3: "A",
+            q4: "A",
+            q5: "A",
+            q6: "A",
+            q7: "B",
+            q8: "A",
+            q9: "A",
+            q10: "B"
+        };
+        
+        function calculateScore() {
+            let score = 100;
+            let feedback = "";
+            let answeredQuestions = 0;
+            
+            // 檢查每個問題
+            for (let i = 1; i <= 10; i++) {
+                const questionId = "q" + i;
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                
+                if (selectedOption) {
+                    answeredQuestions++;
+                    const userAnswer = selectedOption.value;
+                    
+                    if (userAnswer !== correctAnswers[questionId]) {
+                        // 答錯扣10分
+                        score -= 10;
+                        feedback += `<p class="incorrect">問題 ${i}: 不正確。正確答案是 ${correctAnswers[questionId]}。</p>`;
+                    } else {
+                        feedback += `<p class="correct">問題 ${i}: 正確!</p>`;
+                    }
+                } else {
+                    // 未回答扣5分
+                    score -= 5;
+                    feedback += `<p class="incorrect">問題 ${i}: 未回答。正確答案是 ${correctAnswers[questionId]}。</p>`;
+                }
+            }
+            
+            // 顯示結果
+            document.getElementById("score").textContent = `得分: ${score}/100`;
+            document.getElementById("feedback").innerHTML = feedback;
+            document.getElementById("result").style.display = "block";
+            
+            // 滾動到結果區域
+            document.getElementById("result").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
