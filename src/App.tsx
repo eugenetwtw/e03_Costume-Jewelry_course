@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Analytics } from "@vercel/analytics/next"
+{/* import { Analytics } from "@vercel/analytics/next" */}
 import './App.css'
 
 // 定義課程結構
