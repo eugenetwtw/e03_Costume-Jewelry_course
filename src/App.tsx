@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
-{/* import { Analytics } from "@vercel/analytics/next" */}
+import { Analytics } from "@vercel/analytics/react"
 import './App.css'
 
 // 定義課程結構
@@ -131,7 +131,7 @@ function App() {
       <footer className="app-footer">
         <p>© 2025 高級時裝珠寶課程 | 所有內容基於《Costume Jewelry for Haute Couture》</p>
       </footer>
-    {/* <Analytics /> */}
+    <Analytics />
     </div>
   )
 }
