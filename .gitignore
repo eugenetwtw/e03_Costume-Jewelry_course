@@ -1,0 +1,187 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node.js
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# macOS
+.DS_Store
+
+# Temporary files created by Metro
+.npmrc
+.yarnrc
+.babelrc
+.eslintrc
+.prettierrc
+.stylelintrc
+.tslint.json
+.webpackrc
+.parcelrc
+.flowconfig
+.watchmanconfig
+.hg
+.hgcheck
+.hgignore
+.svn
+CVS
+*.orig
+*.rej
+*.swo
+*.swp
+*.swn
+*.swm
+*~
+.#*
+*#
+*.bak
+*.tmp
+*.temp
+*.cache
+*.diff
+*.patch
+*.a
+*.lib
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+*.bin
+*.elf
+*.map
+*.img
+*.iso
+*.dmg
+*.xip
+*.pkg
+*.deb
+*.rpm
+*.apk
+*.aab
+*.ipa
+*.ap_
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Build directories
+build
+out
+dist
+bin
+target
+
+# Coverage directory used by tools like istanbul
+coverage
+.jest
+.nyc_output
+
+# Dependency directories
+jspm_packages
+bower_components
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env.*
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# public
+
+# vuepress build output
+.vuepress/dist
+
+# vuepress v2.x temp and cache directory
+.temp
+.cache
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox
+
+# DynamoDB Local files
+.dynamodb
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
